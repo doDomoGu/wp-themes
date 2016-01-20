@@ -1,5 +1,4 @@
 <?php
-$themename = "Dchaser";
 if('true' === $_REQUEST['settings-updated'] ){
       echo '<div id="message" class="updated fade">保存成功!</div>';
 }
@@ -8,7 +7,7 @@ if('true' === $_REQUEST['settings-updated'] ){
 <!-- Options Form begin -->
 <div class="wrap">
 	<div id="icon-options-general" class="icon32"><br/></div>
-	<h2><?php echo $themename; ?>主题设置</h2>
+	<h2>主题设置</h2>
     <ul class="subsubsub" style="margin-top:15px; ">
     	<li><a href="#Dchaser_base"><strong>基本设置</strong></a> |</li>
         <li><a href="#Dchaser_seo"><strong>SEO设置</strong></a> </li>

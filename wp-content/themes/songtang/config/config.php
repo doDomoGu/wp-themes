@@ -48,7 +48,7 @@ return array(
     ),
     //主题选项
     'theme_options'=>array(
-        'theme-option'=>array('Dchaser主题设置','Dchaser_stat','Dchaser_links','Dchaser_keywords','Dchaser_description','Dchaser_aboutus','Dchaser_beian')
+        'theme-option'=>array('主题设置','Dchaser_stat','Dchaser_links','Dchaser_keywords','Dchaser_description','Dchaser_aboutus','Dchaser_beian')
     ),
     'ext_config'=>array('sidebar','widget')
 );
