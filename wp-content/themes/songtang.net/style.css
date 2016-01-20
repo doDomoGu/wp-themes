@@ -20,6 +20,7 @@ html, body {
     width: 100%;
 }
 body {
+    background:#f0f0f0;
     font: 12px/1 "Microsoft Yahei","微软雅黑",sans-serif;
     margin: 0 auto;
     overflow-y: scroll;
@@ -80,6 +81,77 @@ input, textarea, select, button {
 }
 .clearfix {
 }
+
+.container {
+    width:1140px;
+    margin:0 auto;
+}
+
+/* header */
+#header {
+    background: #005684;
+}
+#header>.container {
+    background: #FFF;
+    height:80px;
+}
+
+#logo a {
+    overflow: hidden;
+    height:60px;
+    display: block;
+    float:left;
+    padding:10px 20px;
+}
+#logo a img{
+    height:60px;
+}
+
+#nav {
+    float:right;
+    padding-right:20px;
+}
+
+#nav > .menu-container > ul#header-menu > li {
+    float:left;
+}
+
+#nav > .menu-container > ul#header-menu > li > a {
+    display: block;
+    font-size:13px;
+    font-weight: 700;
+    padding:33px 10px 34px;
+    color:#666;
+}
+
+#nav > .menu-container > ul#header-menu > li.hover > a {
+    background: #FF0000;
+    color:#fff;
+}
+
+#nav > .menu-container > ul#header-menu > li > ul.sub-menu {
+    position: absolute;
+    background: #4C4A4F;
+    padding:0 40px;
+    display: none;
+}
+
+#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li {
+    float:left;
+}
+
+#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li > a {
+    display: block;
+    font-size:13px;
+    font-weight: 700;
+    padding:20px 10px;
+    color: #d2ced5;
+}
+
+#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li.hover > a {
+    color:#f63b2e;
+}
+
 /*body {
     max-width: 1680px;
     min-width: 1130px;
