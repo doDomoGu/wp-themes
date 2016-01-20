@@ -4,10 +4,10 @@ get_header('meta');
 get_header();
 ?>
 <!--首页小横栏 -->
-<div class="heading-top">
-<img src="<?php bloginfo('template_url'); ?>/static/img/gonggao.gif" style="vertical-align: middle;margin-bottom: 3px;border:0"/> 22官方反馈交流 QQ 群：121235751 ，欢迎加入！新版本将第一时间在Q群发布。
+<!--<div class="heading-top">
+<img src="<?php /*bloginfo('template_url'); */?>/static/img/gonggao.gif" style="vertical-align: middle;margin-bottom: 3px;border:0"/> 官方反馈交流 QQ 群：121235751 ，欢迎加入！新版本将第一时间在Q群发布。
   主题下载：<a href="http://t.cn/8knzKcZ">http://t.cn/8knzKcZ</a>
-</div>
+</div>-->
 <!-- Main Container -->
 <div id="body-wrapper" class="body-wraper-path">
  <!-- Content -->

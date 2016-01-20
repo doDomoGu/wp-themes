@@ -43,7 +43,8 @@ return array(
         ),
     'js'=>array(
         'static/js/jquery-1.7.2.min.js',
-        'static/js/custom.min.js',
+        /*'static/js/custom.min.js',*/
+        'static/js/custom.js',
         'static/js/jquery.plug.min.js'
     ),
     //主题选项
