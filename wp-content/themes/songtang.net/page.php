@@ -1,14 +1,14 @@
 <?php
 /*
-Template Name:集团介绍
+Template Name:单页面_集团介绍
 */
 ?>
 
 <?php
     get_header();
 ?>
-<div>
-<?php echo 'intro';?>
+<div id="content">
+    page
 </div>
 <?php
     get_footer();

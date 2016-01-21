@@ -6,17 +6,12 @@
     <?php include('lib/seo.php'); ?>
     <!--<link rel="pingback" href="<?php /*bloginfo( 'pingback_url' ); */?>" />-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-    <?php
-    //各页面加载css
-        include('lib/load_css.php');
-    ?>
     <script src="<?php bloginfo('template_url'); ?>/static/js/jquery.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/custom.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/static/js/header.js"></script>
     <?php
-    //各页面加载js
-    include('lib/load_js.php');
+        //各页面加载css/js
+        include('lib/load_script.php');
     ?>
-
     <?php
     //加载css
     //gk_load_css();

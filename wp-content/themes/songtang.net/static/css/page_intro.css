@@ -1,0 +1,8 @@
+#banner {
+    width:100%;
+    overflow: hidden;
+}
+#banner .intro {
+    background: url('../img/test/intro_banner.jpg') no-repeat center;
+    height:93px;
+}
