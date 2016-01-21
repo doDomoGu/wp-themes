@@ -30,7 +30,6 @@
 </head>
 <body>
 <header id="header">
-
     <div class="container">
         <div id="logo">
             <a href="/">
@@ -44,6 +43,9 @@
                     'container_class' => 'menu-container',
                     'menu_id' => 'header-menu',
                     'menu_class' => '',
+                    'link_before' => '<span>',
+                    'link_after' => '</span><span class="bkg"></span>',
+                    'depth' => 2
                 )); ?>
 
 
@@ -75,12 +77,13 @@
     </div>
     <div class="clearfix"></div>
 </header>
-
 <div>
-    <?php
-$menus = get_terms('nav_menu');
-foreach( $menus as $menu ){
-    echo '<pre>'; var_export($menu); echo '</pre>';
-}?>
-</div>
+   <!-- <?php
+/*        $menus = get_terms('nav_menu');
+    foreach( $menus as $menu ){
+        echo '<pre>'; var_export($menu); echo '</pre>';
+    }
+    */?>
+    --><?php /*bloginfo('home');*/?>
 
+</div>

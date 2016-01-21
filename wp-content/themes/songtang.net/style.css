@@ -89,66 +89,126 @@ input, textarea, select, button {
 
 /* header */
 #header {
-    background: #005684;
-}
-#header>.container {
     background: #FFF;
     height:80px;
+    position:relative;
+    z-index:5;
 }
 
-#logo a {
-    overflow: hidden;
+#header>.container {
+    position:relative;
+    margin:0 auto;
+    height:100%;
+    /*overflow:hidden;*/
+}
+
+#logo {
+    position:absolute;
+    top:10px;
+    left:20px;
     height:60px;
-    display: block;
-    float:left;
-    padding:10px 20px;
 }
 #logo a img{
     height:60px;
 }
 
-#nav {
+/*#nav {
     float:right;
-    padding-right:20px;
+   padding-right:20px;
+}*/
+#nav > .menu-container > ul#header-menu{
+    position:absolute;
+    top:0;
+    right:86px;
+    z-index:4;
+    height:100%;
+    background-color:#fff;
+    /*overflow:hidden;*/
 }
 
 #nav > .menu-container > ul#header-menu > li {
     float:left;
+    width:90px;
+    height:100%;
+    -webkit-transition:background-color 700ms;
+    transition:background-color 700ms;
+    z-index:200;
 }
 
 #nav > .menu-container > ul#header-menu > li > a {
-    display: block;
+    position:relative;
+    z-index:200;
+    display:block;
+    width:100%;
+    height:100%;
+    font-weight:bold;
     font-size:13px;
-    font-weight: 700;
-    padding:33px 10px 34px;
+    line-height:79px;
+    text-align:center;
     color:#666;
+    -webkit-transition:color 2000ms;
+    transition:color 200ms;
 }
 
-#nav > .menu-container > ul#header-menu > li.hover > a {
-    background: #FF0000;
+#nav > .menu-container > ul#header-menu > li > a > span{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:20;
+    width:100%;
+    height:100%;
+}
+
+#nav > .menu-container > ul#header-menu > li > a > span.bkg {
+    top:80px;
+    z-index:1;
+    background-color:#f00;
+    /*-webkit-transition:top 200ms;
+    transition:top 200ms;*/
+    height:0;
+}
+
+#nav > .menu-container > ul#header-menu > li.on > a {
     color:#fff;
+}
+
+#nav > .menu-container > ul#header-menu > li.on > a > span.bkg {
+    /*top:0;*/
 }
 
 #nav > .menu-container > ul#header-menu > li > ul.sub-menu {
     position: absolute;
     background: #4C4A4F;
-    padding:0 40px;
-    display: none;
+    padding-left:96px;
+
+    display: block;
+    z-index:1;
+    /*height:0;*/
+    /*top:27px;*/
+    width:900px;
+    height:0;
+    font-size:13px;
+    line-height:13px;
+    overflow: hidden;
+
 }
 
 #nav > .menu-container > ul#header-menu > li > ul.sub-menu > li {
     float:left;
+    width:96px;
+    display: block;
 }
 
 #nav > .menu-container > ul#header-menu > li > ul.sub-menu > li > a {
     display: block;
-    font-size:13px;
+
     font-weight: 700;
-    padding:20px 10px;
+    padding:0 10px;
     color: #d2ced5;
+
 }
 
-#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li.hover > a {
+#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li.on > a {
     color:#f63b2e;
 }
 
