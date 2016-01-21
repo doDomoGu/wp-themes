@@ -1,4 +1,5 @@
 $(function(){
+    //nav导航菜单栏
     _curNav = $('#nav > .menu-container > ul#header-menu > li.current-menu-item');
     if(_curNav.length == 0){
         _curNav = $('#nav > .menu-container > ul#header-menu > li.current-menu-parent');
@@ -38,6 +39,4 @@ $(function(){
     }).mouseleave(function(){
         $(this).removeClass('on');
     });
-
-
 });

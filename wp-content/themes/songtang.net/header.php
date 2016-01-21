@@ -12,7 +12,10 @@
     ?>
     <script src="<?php bloginfo('template_url'); ?>/static/js/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/static/js/custom.js"></script>
-
+    <?php
+    //各页面加载js
+    include('lib/load_js.php');
+    ?>
 
     <?php
     //加载css
@@ -77,13 +80,3 @@
     </div>
     <div class="clearfix"></div>
 </header>
-<div>
-   <!-- <?php
-/*        $menus = get_terms('nav_menu');
-    foreach( $menus as $menu ){
-        echo '<pre>'; var_export($menu); echo '</pre>';
-    }
-    */?>
-    --><?php /*bloginfo('home');*/?>
-
-</div>
