@@ -212,6 +212,29 @@ input, textarea, select, button {
     color:#f63b2e;
 }
 
+
+/* footer */
+#footer {
+    margin-top:10px;
+    border-top: 2px solid #c5c5c5;
+    padding-top:10px;
+}
+
+#footer .footer-content img{
+    width:100%;
+}
+
+#footer .copyright {
+    color: #4b4b51;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+
+    text-align: center;
+}
+
+
+
 /*body {
     max-width: 1680px;
     min-width: 1130px;
