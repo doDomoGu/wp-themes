@@ -106,7 +106,7 @@ input, textarea, select, button {
 #logo {
     position:absolute;
     top:10px;
-    left:20px;
+    left:0;
     height:60px;
 }
 #logo a img{
@@ -120,7 +120,8 @@ input, textarea, select, button {
 #menu > .menu-container > ul#header-menu{
     position:absolute;
     top:0;
-    right:86px;
+    /*right:86px;*/
+    right:0;
     z-index:4;
     height:100%;
     background-color:#fff;
@@ -129,7 +130,7 @@ input, textarea, select, button {
 
 #menu > .menu-container > ul#header-menu > li {
     float:left;
-    width:90px;
+    width:76px;
     height:100%;
     -webkit-transition:background-color 700ms;
     transition:background-color 700ms;
@@ -180,7 +181,7 @@ input, textarea, select, button {
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu {
     position: absolute;
     background: #4C4A4F;
-    padding-left:96px;
+    padding-left:76px;
 
     display: block;
     z-index:1;
