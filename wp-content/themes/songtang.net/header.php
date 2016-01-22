@@ -34,7 +34,7 @@
                 <img src="<?php  bloginfo('template_url'); ?>/static/img/logo.png" />
             </a>
         </div>
-        <div id="nav">
+        <div id="menu">
             <?php wp_nav_menu(
                 array(
                     'theme_location' => 'header-menu',

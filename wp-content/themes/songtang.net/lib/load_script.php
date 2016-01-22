@@ -29,6 +29,7 @@
     //js
     $jsDir = '/static/js/';
     $jsFile = false;
+    $jsFiles = [];
     if(is_home())
         $jsFile = 'home.js';
     if(is_search())
@@ -37,6 +38,7 @@
         $jsFile = 'single.js';
     if(is_page()){
         if('page_intro.php' == get_page_template_slug()){
+            $jsFiles[] = 'nav.js';
             //$jsFile = 'page_intro.js';
         }else{
             //$jsFile = 'page.js';
@@ -47,7 +49,11 @@
     if(is_month())
         $jsFile = 'month.js';
 ?>
-<?php if($jsFile!=false):?>
+<?php if(!empty($jsFiles)):?>
+    <?php foreach($jsFiles as $js):?>
+        <script src="<?php bloginfo('template_url'); ?><?=$jsDir.$js?>"></script>
+    <?php endforeach;?>
+<?php elseif($jsFile!=false):?>
     <script src="<?php bloginfo('template_url'); ?><?=$jsDir.$jsFile?>"></script>
 <?php endif;?>
 

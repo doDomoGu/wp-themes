@@ -117,7 +117,7 @@ input, textarea, select, button {
     float:right;
    padding-right:20px;
 }*/
-#nav > .menu-container > ul#header-menu{
+#menu > .menu-container > ul#header-menu{
     position:absolute;
     top:0;
     right:86px;
@@ -127,7 +127,7 @@ input, textarea, select, button {
     /*overflow:hidden;*/
 }
 
-#nav > .menu-container > ul#header-menu > li {
+#menu > .menu-container > ul#header-menu > li {
     float:left;
     width:90px;
     height:100%;
@@ -136,7 +136,7 @@ input, textarea, select, button {
     z-index:200;
 }
 
-#nav > .menu-container > ul#header-menu > li > a {
+#menu > .menu-container > ul#header-menu > li > a {
     position:relative;
     z-index:200;
     display:block;
@@ -151,7 +151,7 @@ input, textarea, select, button {
     transition:color 200ms;
 }
 
-#nav > .menu-container > ul#header-menu > li > a > span{
+#menu > .menu-container > ul#header-menu > li > a > span{
     position:absolute;
     left:0;
     top:0;
@@ -160,7 +160,7 @@ input, textarea, select, button {
     height:100%;
 }
 
-#nav > .menu-container > ul#header-menu > li > a > span.bkg {
+#menu > .menu-container > ul#header-menu > li > a > span.bkg {
     top:80px;
     z-index:1;
     background-color:#f00;
@@ -169,15 +169,15 @@ input, textarea, select, button {
     height:0;
 }
 
-#nav > .menu-container > ul#header-menu > li.on > a {
+#menu > .menu-container > ul#header-menu > li.on > a {
     color:#fff;
 }
 
-#nav > .menu-container > ul#header-menu > li.on > a > span.bkg {
+#menu > .menu-container > ul#header-menu > li.on > a > span.bkg {
     /*top:0;*/
 }
 
-#nav > .menu-container > ul#header-menu > li > ul.sub-menu {
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu {
     position: absolute;
     background: #4C4A4F;
     padding-left:96px;
@@ -194,13 +194,13 @@ input, textarea, select, button {
 
 }
 
-#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li {
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li {
     float:left;
     width:96px;
     display: block;
 }
 
-#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li > a {
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li > a {
     display: block;
 
     font-weight: 700;
@@ -209,7 +209,7 @@ input, textarea, select, button {
 
 }
 
-#nav > .menu-container > ul#header-menu > li > ul.sub-menu > li.on > a {
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.on > a {
     color:#f63b2e;
 }
 
@@ -233,6 +233,17 @@ input, textarea, select, button {
 
     text-align: center;
 }
+
+/* nav */
+#nav .wrap .crumbs {float:left; padding-left:13px; height:100%; background:url(static/img/common/crumbs_icon.png) no-repeat 0 32px;}
+#nav .wrap .crumbs a {float:left; padding:0 9px; font-weight:bold; font-size:12px; line-height:77px; color:#4d4852;}
+#nav .wrap .crumbs a.on {background:url(static/img/common/crumbs_arrow.png) no-repeat 0 36px;}
+#nav .wrap .columns {float:right; height:100%;}
+#nav .wrap .columns a {position:relative; float:left; margin-left:30px; font-weight:bold; line-height:77px; color:#63666b;}
+#nav .wrap .columns a span {position:absolute; left:0; bottom:0; width:0; height:2px; background-color:#f63b2e; border-radius:4px; -webkit-transition:width 300ms; transition:width 300ms;}
+#nav .wrap .columns a.on span {/*left:15%; */width:100%;}
+
+#nav { height:77px;border-bottom: 1px solid #eaeaea;}
 
 
 
