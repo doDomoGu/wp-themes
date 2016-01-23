@@ -29,7 +29,9 @@ Template Name:单页面_集团介绍
     </div>
     <div id="main" class="container">
         <div id="left">
+            <div id="post_content">
             <?=$post->post_content?>
+            </div>
         </div>
         <div id="right">
             <a href="/" target="_blank">

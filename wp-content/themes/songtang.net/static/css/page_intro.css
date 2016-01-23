@@ -14,6 +14,14 @@
     width: 794px;
 }
 
+#post_content {
+    text-indent: 2em;
+    font-size:12px;
+    color: #746969;
+    line-height:22px;
+    text-align: justify;
+}
+
 #right {
     border-left: 1px solid #eee;
     float: right;
