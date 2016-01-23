@@ -87,13 +87,18 @@
     }
 
 
-    function get_category_parents_ex(){
-        if(is_category()){
-            $id = get_query_var('cat');
-        }elseif(is_single()){
-            $category = get_the_category();
-            $id = $category[0]->cat_ID;
+    function get_category_parents_ex($catid=''){
+        if($catid==''){
+            if(is_category()){
+                $id = get_query_var('cat');
+            }elseif(is_single()){
+                $category = get_the_category();
+                $id = $category[0]->cat_ID;
+            }
+        }else{
+            $id = $catid;
         }
+
         $link = true;
         $separator = '';
         $nicename = false;
@@ -110,7 +115,7 @@
 
         if ( $parent->parent && ( $parent->parent != $parent->term_id ) && !in_array( $parent->parent, $visited ) ) {
             $visited[] = $parent->parent;
-            $chain .= get_category_parents_ex( $parent->parent, $link, $separator, $nicename, $visited );
+            $chain .= get_category_parents_ex( $parent->parent);
         }
 
         if ( $link )
