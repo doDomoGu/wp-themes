@@ -31,8 +31,11 @@
         if($post->post_type=='page'){
             $object_id = $post->ID;
 
-        }else{
+        }elseif(is_category()){
             $object_id = $cat;
+        }elseif(is_single()){
+            $category = get_the_category();
+            $object_id = $category[0]->cat_ID;
         }
 
         $menu_item_id = $wpdb->get_var($wpdb->prepare("SELECT `post_id`
@@ -84,8 +87,13 @@
     }
 
 
-    function get_category_parents_ex($cat_id){
-        $id = $cat_id;
+    function get_category_parents_ex(){
+        if(is_category()){
+            $id = get_query_var('cat');
+        }elseif(is_single()){
+            $category = get_the_category();
+            $id = $category[0]->cat_ID;
+        }
         $link = true;
         $separator = '';
         $nicename = false;
@@ -111,4 +119,31 @@
             $chain .= $name.$separator;
         return $chain;
     }
+
+
+    function getPostViews($postID){
+        $count_key = 'post_views_count';
+        $count = get_post_meta($postID, $count_key, true);
+        if($count==''){
+            delete_post_meta($postID, $count_key);
+            add_post_meta($postID, $count_key, '0');
+            return '0';
+        }
+        return $count;
+    }
+
+    function setPostViews($postID) {
+        $count_key = 'post_views_count';
+        $count = get_post_meta($postID, $count_key, true);
+        if($count==''){
+            $count = 0;
+            delete_post_meta($postID, $count_key);
+            add_post_meta($postID, $count_key, '0');
+        }else{
+            $count++;
+            update_post_meta($postID, $count_key, $count);
+        }
+    }
+
+
 ?>

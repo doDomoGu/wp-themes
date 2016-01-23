@@ -35,7 +35,7 @@
                     </div>
                     <div class="summary">
                         <h1><?php the_title(); ?></h1>
-                        <h3>发布者: <?php the_author (); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览次数: 8723</h3>
+                        <h3>发布者: <?php the_author (); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览次数: <?=getPostViews($post->ID);?></h3>
                         <p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 420,"......"); ?></p>
                     </div>
                 </a>
