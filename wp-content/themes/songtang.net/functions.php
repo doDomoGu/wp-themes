@@ -23,15 +23,22 @@
     function get_current_menu_item_id(){
         global $post;
         global $wpdb;
+        global $cat;
 
+        //get_query_var('cat');
         $menu_item_id = false;
 
         if($post->post_type=='page'){
-            $menu_item_id = $wpdb->get_var($wpdb->prepare("SELECT `post_id`
+            $object_id = $post->ID;
+
+        }else{
+            $object_id = $cat;
+        }
+
+        $menu_item_id = $wpdb->get_var($wpdb->prepare("SELECT `post_id`
                               FROM `$wpdb->postmeta`
                               WHERE `meta_key` = '_menu_item_object_id'
-                                    AND `meta_value` = %s", $post->ID));
-        }
+                                    AND `meta_value` = %s", $object_id));
 
         return $menu_item_id;
     }
@@ -74,5 +81,34 @@
             }
         }
         return $menu_items;
+    }
+
+
+    function get_category_parents_ex($cat_id){
+        $id = $cat_id;
+        $link = true;
+        $separator = '';
+        $nicename = false;
+        $visited = array();
+        $chain = '';
+        $parent = get_term( $id, 'category' );
+        if ( is_wp_error( $parent ) )
+            return $parent;
+
+        if ( $nicename )
+            $name = $parent->slug;
+        else
+            $name = $parent->name;
+
+        if ( $parent->parent && ( $parent->parent != $parent->term_id ) && !in_array( $parent->parent, $visited ) ) {
+            $visited[] = $parent->parent;
+            $chain .= get_category_parents_ex( $parent->parent, $link, $separator, $nicename, $visited );
+        }
+
+        if ( $link )
+            $chain .= '<a href="' . esc_url( get_category_link( $parent->term_id ) ) . '" class="on">'.$name.'</a>' . $separator;
+        else
+            $chain .= $name.$separator;
+        return $chain;
     }
 ?>

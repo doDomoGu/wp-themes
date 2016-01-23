@@ -245,7 +245,29 @@ input, textarea, select, button {
 
 #nav { height:77px;border-bottom: 1px solid #eaeaea;}
 
+/* sidebar_right */
 
+#left {
+    border-right: 1px solid #eee;
+    float: left;
+    padding: 23px 23px 43px 0;
+    width: 794px;
+}
+
+
+#right {
+    border-left: 1px solid #eee;
+    float: right;
+    margin-left: -1px;
+    padding: 23px 0 43px 22px;
+    width: 300px;
+}
+
+
+#right > a {
+    display: block;
+    margin-bottom: 10px;
+}
 
 /*body {
     max-width: 1680px;
