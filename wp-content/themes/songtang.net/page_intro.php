@@ -27,11 +27,26 @@ Template Name:单页面_集团介绍
             </div>
         </div>
     </div>
-    <div id="main">
-
+    <div id="main" class="container">
+        <div id="left">
+            <?=$post->post_content?>
+        </div>
+        <div id="right">
+            <a href="/" target="_blank">
+                <img width="300px" alt="" src="<?php bloginfo('template_url')?>/static/img/test/intro_right_1.jpg">
+            </a>
+            <a href="/" target="_blank">
+                <img width="300px" alt="" src="<?php bloginfo('template_url')?>/static/img/test/intro_right_2.jpg">
+            </a>
+            <a href="/" target="_blank">
+                <img width="300px" alt="" src="<?php bloginfo('template_url')?>/static/img/test/intro_right_3.jpg">
+            </a>
+        </div>
     </div>
 </div>
 <div class="clearfix"></div>
+
+
 <div class="container">
     <?php
 /*    var_dump($post);echo "<br/><br/>";
