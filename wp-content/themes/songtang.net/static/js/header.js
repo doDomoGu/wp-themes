@@ -7,7 +7,6 @@ $(function(){
             _curMenuChildren =$('#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.current-menu-parent');
             if(_curMenuChildren.length == 0){
                 _curMenu = $('#menu > .menu-container > ul#header-menu > li').eq(0);
-                alert('222');
             }else{
                 _curMenu = _curMenuChildren.parent('ul').parent('li.menu-item');
                 if(_curMenu.length == 0){

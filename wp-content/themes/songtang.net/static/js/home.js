@@ -70,4 +70,33 @@ $(function() {
             fade(idx===max_i? idx=0: ++idx);
         }, delay);
     }
+
 });
+
+
+/*
+// 新闻轮播
+$(function() {
+    alert('ss');
+    var sup   = $('#news-slide'),
+        items = sup.children(),
+        first = items.eq(0);
+
+    //win.on('load', function() {auto();});
+    auto2();
+    function slide(elem) {
+        alert('ss');
+        elem = first;
+        first.animate({'margin-top':-57}, 500, function() {
+            first = first.next();
+            sup.append(elem.css('margin-top', 0));
+        });
+        auto2();
+    }
+
+    function auto2() {
+        setTimeout(function() {
+            slide();
+        }, 200);
+    }
+});*/

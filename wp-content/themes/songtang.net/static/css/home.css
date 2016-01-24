@@ -22,3 +22,12 @@
 #banner .g-wrap .idxs {float:left; height:100%;}
 #banner .g-wrap .idxs li {float:left; margin:30px 7px 0 0; width:9px; height:9px; border-radius:13px; border:2px solid #fff; cursor:pointer; -ms-transition:background-color 1000ms, margin-top 500ms, border-color 1000ms; transition:background-color 500ms, margin-top 500ms; transition:background-color 1000ms, margin-top 500ms, border-color 1000ms; -webkit-transition:background-color 1000ms, margin-top 500ms, border-color 1000ms; -moz-transition:background-color 1000ms,  margin-top 500ms, border-color 1000ms; -o-transition:background-color 1000ms, margin-top 500ms, border-color 1000ms;}
 #banner .g-wrap .idxs li.on {background-color:#8f8d93; border-color:#8f8d93;}
+
+
+#news-slide {position:relative; margin:0 auto; padding-left:35px; width:1095px; height:57px; background:url(../img/home/icon_news.png) no-repeat 0 19px; overflow:hidden;}
+#news-slide .item {height:100%;}
+#news-slide .item a {display:inline-block; height:57px; line-height:57px; font-weight:bold; color:#2e2e57; -ms-transition:color 300ms; transition:color 300ms; -webkit-transition:color 300ms; -moz-transition:color 300ms; -o-transition:color 300ms;}
+#news-slide .item a:hover {color:#f63b2e;}
+#news-slide .item a span {margin:0 25px; font-weight:normal; color:#6C6C6C;}
+#news-slide .item .more {padding:0 12px; margin-top:12px; font-weight:bold; height:33px; line-height:33px; font-size:12px;  color:#2e2e57; background-color:#DFE0E4; border-radius:25px; box-shadow:0px 0px 3px #777; -ms-transition:color 300ms, background-color 300ms; transition:color 300ms, background-color 300ms; -webkit-transition:color 300ms, background-color 300ms; -moz-transition:color 300ms, background-color 300ms; -o-transition:color 300ms, background-color 300ms;}
+#news-slide .item .more:hover {background-color:#f63b2e; color:#eee;}
