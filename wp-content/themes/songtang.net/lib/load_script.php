@@ -44,9 +44,10 @@
             //$jsFile = 'page.js';
         }
     }
-    if(is_category())
+    if(is_category()){
         $jsFiles[] = 'category.js';
         $jsFiles[] = 'nav.js';
+    }
     if(is_month())
         $jsFile = 'month.js';
 ?>

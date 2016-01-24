@@ -74,29 +74,97 @@ $(function() {
 });
 
 
-/*
 // 新闻轮播
 $(function() {
-    alert('ss');
     var sup   = $('#news-slide'),
         items = sup.children(),
         first = items.eq(0);
 
     //win.on('load', function() {auto();});
-    auto2();
+    auto();
     function slide(elem) {
-        alert('ss');
         elem = first;
         first.animate({'margin-top':-57}, 500, function() {
             first = first.next();
             sup.append(elem.css('margin-top', 0));
         });
-        auto2();
+        auto();
     }
 
-    function auto2() {
+    function auto() {
         setTimeout(function() {
             slide();
-        }, 200);
+        }, 5000);
     }
-});*/
+});
+
+
+// 滑块控制
+$(function() {
+    var sup   = document.getElementById('subjects').getElementsByTagName('div')[0],
+        items = sup.getElementsByTagName('a'),
+        len   = items.length;
+    // base  = 70,
+    // width_s = parseInt(getComputedStyle(sup).width);
+    // width_i = width_s / len,
+    // left    = null,
+    // style   = null,
+    // lefts = [],  // 普通模式下各元素的位置
+    // styles  = [];
+
+    //win.on('load', function() {sup.className = "g-wrap ready state-0";})
+    sup.className = "g-wrap ready state-0";
+    // 存储常用变量, 绑定事件
+    for (var i=0,elem=null; i<len; i++) {
+        elem = items[i];
+        // styles.push(elem.style);
+        // lefts.push(width_i*i);
+        elem.setAttribute('idx', i+1);
+        bind(elem, 'mouseover', hoverOn);
+    }
+    // 元素逐个出现
+    initItems(0, len, 200);
+
+    // 事件绑定函数
+    bind(sup, 'mouseout', function() {
+        // for (i=0; i<len; i++) {
+        // styles[i].left = lefts[i] + 'px';
+        // }
+        sup.className = "g-wrap state-0";
+    });
+
+    // 控制元素逐个出现
+    function initItems(idx, len, delay) {
+        if (idx === len) return;
+        // style = styles[idx];
+        // style.left = lefts[idx] + "px";
+        // style.opacity = "1";
+        setTimeout(function() {initItems(idx+1, len, delay);}, delay);
+    }
+
+    // 函数绑定
+    function bind (elem, evn, func) {
+        if ('addEventListener' in elem) {
+            bind = function (elem, evn, func) {elem.addEventListener(evn, func, false);}
+        } else {
+            bind = function(elem, evn, func) {elem['on'+evn] = func;}
+        }
+        bind(elem, evn, func);
+    }
+
+    //元素 mouseover 事件处理
+    var i = 0, flag = false;
+    function hoverOn() {
+        // for(i=0, flag=false; i<len; i++) {
+        //     temp = items[i];
+        //     style = styles[i];
+        //     if (temp === this) {
+        //         flag = true;
+        //         style.left = lefts[i] - (i*base) + "px";
+        //     } else {
+        //         style.left = lefts[i] + (flag?(len-i)*base:-(i*base)) + "px";
+        //     }
+        // }
+        sup.className = "g-wrap state-" + this.getAttribute('idx');
+    }
+});
