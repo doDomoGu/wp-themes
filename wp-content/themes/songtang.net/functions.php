@@ -1,10 +1,13 @@
 <?php
-    register_nav_menus(array('header-menu' => __( '导航自定义菜单' ),)); //注册支持导航栏菜单
+    register_nav_menus(array('header-menu' => __( '头部导航菜单' ),)); //注册支持导航栏菜单
 
-    //include('admin2/functions_option.php');
-//    include('theme-option/option-functions.php');
+    //
+    if (!function_exists('optionsframework_init')){
+        define('OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri().'/theme-option/');
+        require_once dirname(__FILE__).'/theme-option/options-framework.php';
+    }
 
-    add_filter( 'wp_nav_menu_objects', 'songtang_wp_nav_menu_objects' );
+   /* add_filter( 'wp_nav_menu_objects', 'songtang_wp_nav_menu_objects' );
     function songtang_wp_nav_menu_objects( $sorted_menu_items )
     {
         foreach ( $sorted_menu_items as $menu_item ) {
@@ -14,7 +17,7 @@
             }
         }
         return $sorted_menu_items;
-    }
+    }*/
 
     function get_menu_items(){
         $nav_menu_loctions = get_nav_menu_locations();

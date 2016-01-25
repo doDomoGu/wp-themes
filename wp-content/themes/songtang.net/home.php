@@ -1,12 +1,26 @@
 <?php
     get_header();
 ?>
+<?php
+    $banner_pics = [];
+    $pics_1 = of_get_option('index_banner_pics_1');
+    $pics_2 = of_get_option('index_banner_pics_2');
+    $pics_3 = of_get_option('index_banner_pics_3');
+    if($pics_1)
+        $banner_pics[] = $pics_1;
+    if($pics_2)
+        $banner_pics[] = $pics_2;
+    if($pics_3)
+        $banner_pics[] = $pics_3;
+?>
 <div id="content">
     <div id="banner">
         <ul class="pics">
-            <li style="background-image: url('<?php bloginfo('template_url')?>/static/img/test/banner1_1920.jpg');" class="b1"><a href="/" target="_blank"></a></li>
-            <li style="background-image: url('<?php bloginfo('template_url')?>/static/img/test/banner2_1920.jpg');" class="b2"><a href="/" target="_blank"></a></li>
-            <li style="background-image: url('<?php bloginfo('template_url')?>/static/img/test/banner3.jpg');" class="b3"><a href="/" target="_blank"></a></li>
+            <?php if(!empty($banner_pics)):?>
+            <?php $i=1;foreach($banner_pics as $bp):?>
+            <li style="background-image: url('<?=$bp?>');" class="b<?=$i?>"><a href="/" target="_blank"></a></li>
+            <?php $i++;endforeach;?>
+            <?php endif;?>
         </ul>
         <div class="btns">
             <a href="javascript:void(0);" class="prev"><span class="off"></span><span class="on"></span></a>
@@ -14,25 +28,26 @@
         </div>
         <div class="g-wrap">
             <ul class="idxs">
-                <li style="margin-top: 0px;" class="on"></li>
-                <li style="margin-top: 0px;" class=""></li>
-                <li style="margin-top: 0px;" class=""></li>
+                <?php for($i=0;$i<count($banner_pics);$i++):?>
+                <li style="margin-top: 0;" class="<?=$i==0?'on':''?>"></li>
+                <?php endfor;?>
             </ul>
         </div>
     </div>
+        <?php
+            $news_cate_id = of_get_option('index_news_cate_id');
+            $recent = new WP_Query("showposts=5&cat=".$news_cate_id);
+
+        ?>
+
+
     <div id="news-slide">
+        <?php while($recent->have_posts()) : $post_item = $recent->the_post();?>
         <div class="item">
-            <a href="/">万科物业与优步（Uber）启动深度合作<span>2015.11.06</span></a>
-            <a class="more" href="/">更多新闻</a>
+            <a href="/"><?php the_title();?><span><?php the_time('Y.m.d')?></span></a>
+            <a class="more" href="<?php echo get_category_link(get_the_category()[0]->term_id)?>">更多新闻</a>
         </div>
-        <div class="item">
-            <a href="/">关于欢迎安邦保险集团成为万科重要股东的声明<span>2015.12.23</span></a>
-            <a class="more" href="/">更多新闻</a>
-        </div>
-        <div class="item">
-            <a href="/">12月23日，王石在瑞士信贷与投资者交流<span>2015.12.23</span></a>
-            <a class="more" href="/">更多新闻</a>
-        </div>
+        <?php   endwhile; wp_reset_query();  ?>
     </div>
     <div id="subjects">
         <div class="g-wrap state-0">
