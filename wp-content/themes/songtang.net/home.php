@@ -44,7 +44,7 @@
     <div id="news-slide">
         <?php while($recent->have_posts()) : $post_item = $recent->the_post();?>
         <div class="item">
-            <a href="/"><?php the_title();?><span><?php the_time('Y.m.d')?></span></a>
+            <a href="<?=get_the_permalink()?>"><?php the_title();?><span><?php the_time('Y.m.d')?></span></a>
             <a class="more" href="<?php echo get_category_link(get_the_category()[0]->term_id)?>">更多新闻</a>
         </div>
         <?php   endwhile; wp_reset_query();  ?>
