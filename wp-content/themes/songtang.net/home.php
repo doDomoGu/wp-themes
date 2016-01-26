@@ -2,24 +2,37 @@
     get_header();
 ?>
 <?php
-    $banner_pics = [];
+    $banner_pics = [1=>[],2=>[],3=>[]];
     $pics_1 = of_get_option('index_banner_pics_1');
     $pics_2 = of_get_option('index_banner_pics_2');
     $pics_3 = of_get_option('index_banner_pics_3');
     if($pics_1)
-        $banner_pics[] = $pics_1;
+        $banner_pics[1]['p'] = $pics_1;
     if($pics_2)
-        $banner_pics[] = $pics_2;
+        $banner_pics[2]['p'] = $pics_2;
     if($pics_3)
-        $banner_pics[] = $pics_3;
+        $banner_pics[3]['p'] = $pics_3;
+
+    $link_1 = of_get_option('index_banner_link_1');
+    $link_2 = of_get_option('index_banner_link_2');
+    $link_3 = of_get_option('index_banner_link_3');
+    if($pics_1)
+        $banner_pics[1]['l'] = $link_1;
+    if($pics_2)
+        $banner_pics[2]['l'] = $link_2;
+    if($pics_3)
+        $banner_pics[3]['l'] = $link_3;
+
 ?>
 <div id="content">
     <div id="banner">
         <ul class="pics">
             <?php if(!empty($banner_pics)):?>
             <?php $i=1;foreach($banner_pics as $bp):?>
-            <li style="background-image: url('<?=$bp?>');" class="b<?=$i?>"><a href="/" target="_blank"></a></li>
-            <?php $i++;endforeach;?>
+                <?php if(isset($bp['p']) && $bp['p']!=''):?>
+            <li style="background-image: url('<?=$bp['p']?>');" class="b<?=$i?>"><a href="<?=isset($bp['l']) && $bp['l']!=''?$bp['l']:'/'?>" target="_blank"></a></li>
+                <?php $i++;endif;?>
+            <?php endforeach;?>
             <?php endif;?>
         </ul>
         <div class="btns">

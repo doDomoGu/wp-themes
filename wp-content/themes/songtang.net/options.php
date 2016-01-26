@@ -118,6 +118,13 @@ function optionsframework_options() {
     ];
 
     $options[] = [
+        'name' => '轮播banner 1的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_1',
+        'type' => 'text'
+    ];
+
+    $options[] = [
         'name' => '轮播banner 2',
         'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
         'id' => 'index_banner_pics_2',
@@ -125,10 +132,24 @@ function optionsframework_options() {
     ];
 
     $options[] = [
+        'name' => '轮播banner 2的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_2',
+        'type' => 'text'
+    ];
+
+    $options[] = [
         'name' => '轮播banner 3',
         'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
         'id' => 'index_banner_pics_3',
         'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 3的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_3',
+        'type' => 'text'
     ];
 
     if ( $options_categories ) {
