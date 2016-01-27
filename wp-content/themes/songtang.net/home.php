@@ -66,34 +66,34 @@
         <div class="g-wrap state-0">
             <a href="/" target="_blank" class="item-1" idx="1">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_1.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_1.jpg">
                 </span>
                 <span class="p2" style="left: 350px; top: 21px;">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_1_2.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_1_2.jpg">
                 </span>
             </a>
             <a href="/" target="_blank" class="item-2" idx="2">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_2.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_2.jpg">
                 </span>
                 <span class="p2">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_2_2.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_2_2.jpg">
                 </span>
             </a>
-            <a href="/0" class="item-3" idx="3">
+            <a href="/" class="item-3" idx="3">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_3.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_3.jpg">
                 </span>
                 <span class="p2">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_3_2.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_3_2.jpg">
                 </span>
             </a>
             <a href="/" target="_blank" class="item-4" idx="4">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_4.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_4.jpg">
                 </span>
                 <span class="p2">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/test/slider_4_2.jpg">
+                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_4_2.jpg">
                 </span>
             </a>
         </div>
