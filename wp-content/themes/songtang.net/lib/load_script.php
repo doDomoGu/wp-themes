@@ -15,7 +15,7 @@
         if('page_intro.php' == get_page_template_slug()){
             $cssFiles[] = 'page_intro.css';
         }elseif('page_blank.php' == get_page_template_slug()){
-            $cssFiles[] = 'page_intro.css';
+            $cssFiles[] = 'page_blank.css';
         }else{
             //$cssFiles[] = 'page.css';
         }
