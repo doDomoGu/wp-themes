@@ -14,6 +14,8 @@
     if(is_page()){
         if('page_intro.php' == get_page_template_slug()){
             $cssFiles[] = 'page_intro.css';
+        }elseif('page_blank.php' == get_page_template_slug()){
+            $cssFiles[] = 'page_intro.css';
         }else{
             //$cssFiles[] = 'page.css';
         }
@@ -48,8 +50,8 @@
         if('page_intro.php' == get_page_template_slug()){
             $jsFiles[] = 'nav.js';
             //$jsFile = 'page_intro.js';
-        }elseif('page_contact.php' == get_page_template_slug()){
-
+        }elseif('page_blank.php' == get_page_template_slug()){
+            $jsFiles[] = 'nav.js';
         }else{
             //$jsFile = 'page.js';
         }
