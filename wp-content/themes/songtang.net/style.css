@@ -181,18 +181,18 @@ input, textarea, select, button {
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu {
     position: absolute;
     background: #4C4A4F;
-    padding-left:76px;
-
+    /*padding-left:76px;*/
+    padding-left:26px;
+    right:0;
     display: block;
     z-index:1;
     /*height:0;*/
     /*top:27px;*/
-    width:900px;
+    /*width:900px;*/
     height:0;
     font-size:13px;
     line-height:13px;
     overflow: hidden;
-
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li {
@@ -203,11 +203,9 @@ input, textarea, select, button {
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li > a {
     display: block;
-
     font-weight: 700;
     padding:0 10px;
     color: #d2ced5;
-
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.on > a {
