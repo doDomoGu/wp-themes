@@ -218,6 +218,11 @@ input, textarea, select, button {
     padding-top:10px;
 }
 
+#footer .footer-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 #footer .footer-content img{
     width:100%;
 }
@@ -227,7 +232,7 @@ input, textarea, select, button {
     font-weight: bold;
     height: 30px;
     line-height: 30px;
-
+    font-size:14px;
     text-align: center;
 }
 
