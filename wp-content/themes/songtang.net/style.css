@@ -183,7 +183,6 @@ input, textarea, select, button {
     background: #4C4A4F;
     /*padding-left:76px;*/
     padding-left:26px;
-    right:0;
     display: block;
     z-index:1;
     /*height:0;*/

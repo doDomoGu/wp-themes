@@ -18,10 +18,17 @@ $(function(){
     _curMenu.addClass('on');
     _curMenu.children('a').find('span.bkg').animate({height:'80px',top:'0'},200);
 
+
+    _head_menu_wid = $('#header-menu').width();
     $('li.menu-item-has-children').each(function(){
         _len = $(this).find('ul.sub-menu').find('li.menu-item').length;
         _wid = _len*96;
         $(this).find('ul.sub-menu').css('width',_wid+'px');
+
+        _left = $(this).position().left;
+        if(_left+_wid>_head_menu_wid){
+            $(this).find('ul.sub-menu').css('right',0);
+        }
     });
 
     $('#menu > .menu-container > ul#header-menu > li').mouseenter(function(){
