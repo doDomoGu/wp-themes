@@ -153,16 +153,63 @@ function optionsframework_options() {
     ];
 
     if ( $options_categories ) {
-        $options[] = array(
+        $options[] = [
             'name' => '首页新闻分类选择',
             'desc' => '选择所需要显示的分类,显示最新5条，不选择则从全部文章中选择',
             'id' => 'index_news_cate_id',
             'type' => 'select',
-            'options' => $options_categories);
+            'options' => $options_categories
+        ];
     }
 
+    $options[] = [
+        'name' => '页面（集团简介）',
+        'type' => 'heading'
+    ];
 
-	$options[] = array(
+    $options[] = [
+        'name' => '侧边栏 1',
+        'desc' => '',
+        'id' => 'page_intro_pics_1',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 1的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'page_intro_link_1',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 2',
+        'desc' => '',
+        'id' => 'page_intro_pics_2',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 2的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'page_intro_link_2',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 3',
+        'desc' => '',
+        'id' => 'page_intro_pics_3',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 3的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'page_intro_link_3',
+        'type' => 'text'
+    ];
+
+	/*$options[] = array(
 		'name' => __('基本设置', 'options_framework_theme'),
 		'type' => 'heading');
 
@@ -324,7 +371,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __('文本编辑器', 'options_framework_theme'),
-		'type' => 'heading' );
+		'type' => 'heading' );*/
 
 	/**
 	 * For $settings options see:
@@ -334,7 +381,7 @@ function optionsframework_options() {
 	 * 'textarea_name' is set by the 'id' you choose
 	 */
 
-	$wp_editor_settings = array(
+	/*$wp_editor_settings = array(
 		'wpautop' => true, // 默认
 		'textarea_rows' => 5,
 		'tinymce' => array( 'plugins' => 'wordpress' )
@@ -345,7 +392,7 @@ function optionsframework_options() {
 		'desc' => sprintf( __( '您可以设置编辑器，更多关于wp_editor的说明请阅读<a href="%1$s" target="_blank">the WordPress codex</a>', 'options_framework_theme' ), 'http://codex.wordpress.org/Function_Reference/wp_editor' ),
 		'id' => 'example_editor',
 		'type' => 'editor',
-		'settings' => $wp_editor_settings );
+		'settings' => $wp_editor_settings );*/
 
 	return $options;
 }
