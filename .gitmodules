@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/theo"]
+	path = wp-content/themes/theo
+	url = https://git.coding.net/dodomogu/wordpress-theo.git
