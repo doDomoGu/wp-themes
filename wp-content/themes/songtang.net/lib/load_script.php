@@ -14,6 +14,8 @@
     if(is_page()){
         if('page_intro.php' == get_page_template_slug()){
             $cssFiles[] = 'page_intro.css';
+        }if('page_side_right.php' == get_page_template_slug()){
+            $cssFiles[] = 'page_side_right.css';
         }elseif('page_blank.php' == get_page_template_slug()){
             $cssFiles[] = 'page_blank.css';
         }else{
