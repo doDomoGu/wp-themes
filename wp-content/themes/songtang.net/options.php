@@ -162,52 +162,24 @@ function optionsframework_options() {
         ];
     }
 
-    $options[] = [
-        'name' => '页面（集团简介）',
-        'type' => 'heading'
-    ];
-
-    $options[] = [
-        'name' => '侧边栏 1',
-        'desc' => '',
-        'id' => 'page_intro_pics_1',
-        'type' => 'upload'
-    ];
-
-    $options[] = [
-        'name' => '侧边栏 1的链接地址',
-        'desc' => '带http://开头的完整地址',
-        'id' => 'page_intro_link_1',
-        'type' => 'text'
-    ];
-
-    $options[] = [
-        'name' => '侧边栏 2',
-        'desc' => '',
-        'id' => 'page_intro_pics_2',
-        'type' => 'upload'
-    ];
-
-    $options[] = [
-        'name' => '侧边栏 2的链接地址',
-        'desc' => '带http://开头的完整地址',
-        'id' => 'page_intro_link_2',
-        'type' => 'text'
-    ];
-
-    $options[] = [
-        'name' => '侧边栏 3',
-        'desc' => '',
-        'id' => 'page_intro_pics_3',
-        'type' => 'upload'
-    ];
-
-    $options[] = [
-        'name' => '侧边栏 3的链接地址',
-        'desc' => '带http://开头的完整地址',
-        'id' => 'page_intro_link_3',
-        'type' => 'text'
-    ];
+    $options = insert_page_option($options,'页面（企业概况）','intro');
+    $options = insert_page_option($options,'页面（发展历程）','development');
+    $options = insert_page_option($options,'页面（合作伙伴）','cooperation');
+    $options = insert_page_option($options,'页面（企业文化）','corporate-culture');
+    $options = insert_page_option($options,'页面（加入颂唐）','join-us');
+    $options = insert_page_option($options,'页面（联系我们）','contact-us');
+    $options = insert_page_option($options,'分类（新闻动态）','news');
+    $options = insert_page_option($options,'分类（媒体报道）','media');
+    $options = insert_page_option($options,'分类（颂唐地产）','estate');
+    $options = insert_page_option($options,'分类（颂唐广告）','advert');
+    $options = insert_page_option($options,'分类（尚晋公关）','public-relation');
+    $options = insert_page_option($options,'分类（汉佑房屋）','house');
+    $options = insert_page_option($options,'分类（致秦经纪）','manager');
+    $options = insert_page_option($options,'分类（明致置业）','purchase');
+    $options = insert_page_option($options,'分类（日鑫商业）','business');
+    $options = insert_page_option($options,'分类（迈华建筑）','building');
+    $options = insert_page_option($options,'分类（周道物业）','property');
+    $options = insert_page_option($options,'分类（元素互动）','internet');
 
 	/*$options[] = array(
 		'name' => __('基本设置', 'options_framework_theme'),
@@ -395,4 +367,55 @@ function optionsframework_options() {
 		'settings' => $wp_editor_settings );*/
 
 	return $options;
+}
+
+function insert_page_option($options,$name,$post_name){
+    $options[] = [
+        'name' => $name,
+        'type' => 'heading'
+    ];
+
+    $pn = $post_name;
+    $options[] = [
+        'name' => '侧边栏 1',
+        'desc' => '',
+        'id' => 'page_'.$pn.'_pics_1',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 1的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'page_'.$pn.'_link_1',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 2',
+        'desc' => '',
+        'id' => 'page_'.$pn.'_pics_2',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 2的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'page_'.$pn.'_link_2',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 3',
+        'desc' => '',
+        'id' => 'page_'.$pn.'_pics_3',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '侧边栏 3的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'page_'.$pn.'_link_3',
+        'type' => 'text'
+    ];
+    return $options;
 }
