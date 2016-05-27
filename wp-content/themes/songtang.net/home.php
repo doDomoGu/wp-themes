@@ -62,42 +62,103 @@
         </div>
         <?php   endwhile; wp_reset_query();  ?>
     </div>
-    <div id="subjects">
+
+    <?php
+        $slide_pics = [1=>[],2=>[],3=>[]];
+        $slide_pics_1 = of_get_option('index_slide_pics_1');
+        $slide_pics_2 = of_get_option('index_slide_pics_2');
+        $slide_pics_3 = of_get_option('index_slide_pics_3');
+        if($slide_pics_1)
+            $slide_pics[1]['p'] = $slide_pics_1;
+        if($slide_pics_2)
+            $slide_pics[2]['p'] = $slide_pics_2;
+        if($slide_pics_3)
+            $slide_pics[3]['p'] = $slide_pics_3;
+
+        $slide_link_1 = of_get_option('index_slide_link_1');
+        $slide_link_2 = of_get_option('index_slide_link_2');
+        $slide_link_3 = of_get_option('index_slide_link_3');
+        if($slide_pics_1)
+            $slide_pics[1]['l'] = $slide_link_1;
+        if($slide_pics_2)
+            $slide_pics[2]['l'] = $slide_link_2;
+        if($slide_pics_3)
+            $slide_pics[3]['l'] = $slide_link_3;
+    ?>
+
+    <div id="slider22">
+        <?php if(!empty($slide_pics)):?>
+            <?php foreach($slide_pics as $sp):?>
+                <?php if(isset($sp['p']) && $sp['p']!=''):?>
+                    <?php if(isset($sp['l']) && $sp['p']!=''):?>
+                        <a href="<?=$sp['l']?>" target="_blank">
+                            <img src="<?=$sp['p']?>" alt="" title="" />
+                        </a>
+                    <?php else:?>
+                        <img src="<?=$sp['p']?>" alt="" title="" />
+                    <?php endif;?>
+                <?php endif;?>
+            <?php endforeach;?>
+        <?php endif;?>
+
+
+        <!--<a href="http://www.baidu.com" target="_blank">
+            <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a1.jpg" alt="站长素材1" title="" />
+        </a>
+        <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a2.jpg" alt="站长素材2" title="" />
+        <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a3.jpg" alt="站长素材3" title="" />-->
+    </div>
+
+    <!--<div id="slidedeck_frame" class="skin-slidedeck">
+        <dl class="slidedeck">
+            <dt>Slide 1</dt>
+            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/1.jpg"/>Slide content</dd>
+            <dt>Slide 2</dt>
+            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/2.jpg"/>Slide content</dd>
+            <dt>Slide 3</dt>
+            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/3.jpg"/>Slide content</dd>
+            <dt>Slide 4</dt>
+            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/4.jpg"/>Slide content</dd>
+            <dt>Slide 5</dt>
+            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/5.jpg"/>Slide content</dd>
+        </dl>
+    </div>-->
+    <!--<div id="subjects">
         <div class="g-wrap state-0">
             <a href="/" target="_blank" class="item-1" idx="1">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_1.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_1.jpg">
                 </span>
                 <span class="p2" style="left: 350px; top: 21px;">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_1_2.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_1_2.jpg">
                 </span>
             </a>
             <a href="/" target="_blank" class="item-2" idx="2">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_2.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_2.jpg">
                 </span>
                 <span class="p2">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_2_2.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_2_2.jpg">
                 </span>
             </a>
             <a href="/" class="item-3" idx="3">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_3.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_3.jpg">
                 </span>
                 <span class="p2">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_3_2.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_3_2.jpg">
                 </span>
             </a>
             <a href="/" target="_blank" class="item-4" idx="4">
                 <span class="p1">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_4.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_4.jpg">
                 </span>
                 <span class="p2">
-                    <img alt="" src="<?php bloginfo('template_url');?>/static/img/home/slider_4_2.jpg">
+                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_4_2.jpg">
                 </span>
             </a>
         </div>
-    </div>
+    </div>-->
 </div>
 <?php
     get_footer();

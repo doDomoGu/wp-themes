@@ -4,6 +4,8 @@
     $cssFiles = [];
     if(is_home()){
         $cssFiles[] = 'home.css';
+        $cssFiles[] = 'slide/reset.css';
+        $cssFiles[] = 'slide/slider.css';
     }
     if(is_search()){
         //$cssFiles[] = 'search.css';
@@ -40,6 +42,7 @@
     $jsDir = '/static/js/';
     $jsFiles = [];
     if(is_home()){
+        $jsFiles[] = 'slider.jquery.js';
         $jsFiles[] = 'home.js';
     }
     if(is_search()){

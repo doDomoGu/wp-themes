@@ -100,7 +100,7 @@ $(function() {
 
 
 // 滑块控制
-$(function() {
+/*$(function() {
     var sup   = document.getElementById('subjects').getElementsByTagName('div')[0],
         items = sup.getElementsByTagName('a'),
         len   = items.length;
@@ -167,4 +167,20 @@ $(function() {
         // }
         sup.className = "g-wrap state-" + this.getAttribute('idx');
     }
+});*/
+
+/*$(function(){
+    $('.slidedeck').slidedeck({
+        autoPlay: true,
+        cycle: true,
+        autoPlayInterval: 1000
+    });
+});*/
+
+$(function(){
+    $( '#slider22' ).lateralSlider( {
+        captionPadding: '0',
+        captionHeight: 0
+    } );
+
 });

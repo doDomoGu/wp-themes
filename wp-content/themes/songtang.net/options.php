@@ -106,7 +106,7 @@ function optionsframework_options() {
 	$options = array();
 
     $options[] = [
-        'name' => '首页设置',
+        'name' => '首页（上方轮播）',
         'type' => 'heading'
     ];
 
@@ -150,6 +150,58 @@ function optionsframework_options() {
         'desc' => '带http://开头的完整地址',
         'id' => 'index_banner_link_3',
         'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '首页（下方轮播）',
+        'type' => 'heading'
+    ];
+
+    $options[] = [
+        'name' => '下方slide 1',
+        'desc' => '尺寸1140*400',
+        'id' => 'index_slide_pics_1',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '下方slide 1的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_slide_link_1',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '下方slide 2',
+        'desc' => '尺寸1140*400',
+        'id' => 'index_slide_pics_2',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '下方slide 2的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_slide_link_2',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '下方slide 3',
+        'desc' => '尺寸1140*400',
+        'id' => 'index_slide_pics_3',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '下方slide 3的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_slide_link_3',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '首页（新闻分类）',
+        'type' => 'heading'
     ];
 
     if ( $options_categories ) {
