@@ -84,23 +84,37 @@
             $slide_pics[2]['l'] = $slide_link_2;
         if($slide_pics_3)
             $slide_pics[3]['l'] = $slide_link_3;
+
+        $slide_txt_1 = of_get_option('index_slide_txt_1');
+        $slide_txt_2 = of_get_option('index_slide_txt_2');
+        $slide_txt_3 = of_get_option('index_slide_txt_3');
+        if($slide_pics_1)
+            $slide_pics[1]['t'] = $slide_txt_1;
+        if($slide_pics_2)
+            $slide_pics[2]['t'] = $slide_txt_2;
+        if($slide_pics_3)
+            $slide_pics[3]['t'] = $slide_txt_3;
     ?>
 
-    <div id="slider22">
-        <?php if(!empty($slide_pics)):?>
+    <div id="pic_down" >
+        <div class="container">
+        <?php if(!empty($slide_pics)):$k=1;?>
             <?php foreach($slide_pics as $sp):?>
                 <?php if(isset($sp['p']) && $sp['p']!=''):?>
-                    <?php if(isset($sp['l']) && $sp['p']!=''):?>
+                    <?php if(isset($sp['l']) && $sp['l']!=''):?>
                         <a href="<?=$sp['l']?>" target="_blank">
-                            <img src="<?=$sp['p']?>" alt="" title="" />
+                    <?php endif;?>
+                            <span class="pic_down_span <?=$k==3?'span_right':''?>">
+                                <img class="pic_down_img" src="<?=$sp['p']?>" alt="" title="" />
+                                <span class="pic_down_txt"><?=$sp['t']?></span>
+                            </span>
+                    <?php if(isset($sp['l']) && $sp['l']!=''):?>
                         </a>
-                    <?php else:?>
-                        <img src="<?=$sp['p']?>" alt="" title="" />
                     <?php endif;?>
                 <?php endif;?>
-            <?php endforeach;?>
+            <?php $k++;endforeach;?>
         <?php endif;?>
-
+        </div>
 
         <!--<a href="http://www.baidu.com" target="_blank">
             <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a1.jpg" alt="站长素材1" title="" />

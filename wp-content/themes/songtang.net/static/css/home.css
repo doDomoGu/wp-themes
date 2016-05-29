@@ -102,3 +102,54 @@
 #footer {
     border: none;
 }
+
+/* pic_down */
+#pic_down {
+    background: #eee;
+    overflow: hidden;
+}
+
+#pic_down .pic_down_span {
+    display: block;
+    float:left;
+    width:320px;
+    height:350px;
+    margin-right:90px;
+    margin-top:20px;
+    margin-bottom:20px;
+    background: #fff;
+}
+
+#pic_down .pic_down_span:hover {
+    color:#ED1B23;
+}
+
+#pic_down .pic_down_span.span_right {
+    margin-right:0;
+}
+
+#pic_down .pic_down_span .pic_down_img {
+    width:300px;
+    height:300px;
+    padding:10px;
+    display: block;
+}
+
+/*#pic_down .pic_down_span .pic_down_img.mouseenter {
+    width:330px;
+    height:330px;
+    margin:15px;
+}*/
+
+#pic_down .pic_down_span .pic_down_txt {
+    height:30px;
+    display: block;
+    width:300px;
+    margin:0 auto;
+    text-align: center;
+
+    font-size:22px;
+}
+
+/*
+color:#ED1B23;*/
