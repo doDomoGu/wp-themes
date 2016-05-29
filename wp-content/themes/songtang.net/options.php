@@ -159,7 +159,7 @@ function optionsframework_options() {
 
     $options[] = [
         'name' => '下方图片 1',
-        'desc' => '尺寸1140*400',
+        'desc' => '尺寸300*300',
         'id' => 'index_slide_pics_1',
         'type' => 'upload'
     ];
@@ -179,7 +179,7 @@ function optionsframework_options() {
 
     $options[] = [
         'name' => '下方图片 2',
-        'desc' => '尺寸1140*400',
+        'desc' => '尺寸300*300',
         'id' => 'index_slide_pics_2',
         'type' => 'upload'
     ];
@@ -199,7 +199,7 @@ function optionsframework_options() {
 
     $options[] = [
         'name' => '下方图片 3',
-        'desc' => '尺寸1140*400',
+        'desc' => '尺寸300*300',
         'id' => 'index_slide_pics_3',
         'type' => 'upload'
     ];
