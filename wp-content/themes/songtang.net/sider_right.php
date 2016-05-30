@@ -42,18 +42,18 @@
 <?php endif;?>
 <?php if($pics_2!=''):?>
     <?php if($link_2!=''):?>
-        <a href="<?=$link_2?>" target="_blank">
+    <a href="<?=$link_2?>" target="_blank">
     <?php endif;?>
-    <img width="300px" alt="" src="<?=$pics_2?>">
+        <img width="300px" alt="" src="<?=$pics_2?>">
     <?php if($link_2!=''):?>
-        </a>
+    </a>
     <?php endif;?>
 <?php endif;?><?php if($pics_3!=''):?>
     <?php if($link_3!=''):?>
-        <a href="<?=$link_3?>" target="_blank">
+    <a href="<?=$link_3?>" target="_blank">
     <?php endif;?>
-    <img width="300px" alt="" src="<?=$pics_3?>">
+        <img width="300px" alt="" src="<?=$pics_3?>">
     <?php if($link_3!=''):?>
-        </a>
+    </a>
     <?php endif;?>
 <?php endif;?>
