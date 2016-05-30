@@ -32,16 +32,28 @@
 
 ?>
 <?php if($pics_1!=''):?>
-<a href="<?=$link_1!=''?$link_1:''?>" target="_blank">
-    <img width="300px" alt="" src="<?=$pics_1?>">
-</a>
+    <?php if($link_1!=''):?>
+    <a href="<?=$link_1?>" target="_blank">
+    <?php endif;?>
+        <img width="300px" alt="" src="<?=$pics_1?>">
+    <?php if($link_1!=''):?>
+    </a>
+    <?php endif;?>
 <?php endif;?>
 <?php if($pics_2!=''):?>
-    <a href="<?=$link_2!=''?$link_2:''?>" target="_blank">
-        <img width="300px" alt="" src="<?=$pics_2?>">
-    </a>
+    <?php if($link_2!=''):?>
+        <a href="<?=$link_2?>" target="_blank">
+    <?php endif;?>
+    <img width="300px" alt="" src="<?=$pics_2?>">
+    <?php if($link_2!=''):?>
+        </a>
+    <?php endif;?>
 <?php endif;?><?php if($pics_3!=''):?>
-    <a href="<?=$link_3!=''?$link_3:''?>" target="_blank">
-        <img width="300px" alt="" src="<?=$pics_3?>">
-    </a>
+    <?php if($link_3!=''):?>
+        <a href="<?=$link_3?>" target="_blank">
+    <?php endif;?>
+    <img width="300px" alt="" src="<?=$pics_3?>">
+    <?php if($link_3!=''):?>
+        </a>
+    <?php endif;?>
 <?php endif;?>
