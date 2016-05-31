@@ -153,67 +153,49 @@ function optionsframework_options() {
     ];
 
     $options[] = [
-        'name' => '首页（下方图片）',
+        'name' => '首页（杂志图片）',
         'type' => 'heading'
     ];
 
     $options[] = [
-        'name' => '下方图片 1',
-        'desc' => '尺寸300*300',
-        'id' => 'index_slide_pics_1',
+        'name' => '杂志图片 1',
+        'desc' => '尺寸263*263',
+        'id' => 'index_mag_pics_1',
         'type' => 'upload'
     ];
 
     $options[] = [
-        'name' => '下方图片 1的文字',
-        'id' => 'index_slide_txt_1',
-        'type' => 'text'
-    ];
-
-    $options[] = [
-        'name' => '下方图片 1的链接地址',
+        'name' => '杂志图片 1的链接地址',
         'desc' => '带http://开头的完整地址',
-        'id' => 'index_slide_link_1',
+        'id' => 'index_mag_link_1',
         'type' => 'text'
     ];
 
     $options[] = [
-        'name' => '下方图片 2',
-        'desc' => '尺寸300*300',
-        'id' => 'index_slide_pics_2',
+        'name' => '杂志图片 2',
+        'desc' => '尺寸263*263',
+        'id' => 'index_mag_pics_2',
         'type' => 'upload'
     ];
 
     $options[] = [
-        'name' => '下方图片 2的文字',
-        'id' => 'index_slide_txt_2',
-        'type' => 'text'
-    ];
-
-    $options[] = [
-        'name' => '下方图片 2的链接地址',
+        'name' => '杂志图片 2的链接地址',
         'desc' => '带http://开头的完整地址',
-        'id' => 'index_slide_link_2',
+        'id' => 'index_mag_link_2',
         'type' => 'text'
     ];
 
     $options[] = [
-        'name' => '下方图片 3',
-        'desc' => '尺寸300*300',
-        'id' => 'index_slide_pics_3',
+        'name' => '杂志图片 3',
+        'desc' => '尺寸263*263',
+        'id' => 'index_mag_pics_3',
         'type' => 'upload'
     ];
 
     $options[] = [
-        'name' => '下方图片 3的文字',
-        'id' => 'index_slide_txt_3',
-        'type' => 'text'
-    ];
-
-    $options[] = [
-        'name' => '下方图片 3的链接地址',
+        'name' => '杂志图片 3的链接地址',
         'desc' => '带http://开头的完整地址',
-        'id' => 'index_slide_link_3',
+        'id' => 'index_mag_link_3',
         'type' => 'text'
     ];
 

@@ -64,115 +64,67 @@
     </div>
 
     <?php
-        $slide_pics = [1=>[],2=>[],3=>[]];
-        $slide_pics_1 = of_get_option('index_slide_pics_1');
-        $slide_pics_2 = of_get_option('index_slide_pics_2');
-        $slide_pics_3 = of_get_option('index_slide_pics_3');
-        if($slide_pics_1)
-            $slide_pics[1]['p'] = $slide_pics_1;
-        if($slide_pics_2)
-            $slide_pics[2]['p'] = $slide_pics_2;
-        if($slide_pics_3)
-            $slide_pics[3]['p'] = $slide_pics_3;
+        $template_url = get_template_directory_uri();
+        $mag_pics = [
+            1=>['p'=>$template_url."/static/img/home/magizine_01.png"],
+            2=>['p'=>$template_url."/static/img/home/magizine_02.png"],
+            3=>['p'=>$template_url."/static/img/home/magizine_03.png"],
+        ];
+        $mag_pics_1 = of_get_option('index_mag_pics_1');
+        $mag_pics_2 = of_get_option('index_mag_pics_2');
+        $mag_pics_3 = of_get_option('index_mag_pics_3');
+        if($mag_pics_1)
+            $mag_pics[1]['p'] = $mag_pics_1;
+        if($mag_pics_2)
+            $mag_pics[2]['p'] = $mag_pics_2;
+        if($mag_pics_3)
+            $mag_pics[3]['p'] = $mag_pics_3;
 
-        $slide_link_1 = of_get_option('index_slide_link_1');
-        $slide_link_2 = of_get_option('index_slide_link_2');
-        $slide_link_3 = of_get_option('index_slide_link_3');
-        if($slide_pics_1)
-            $slide_pics[1]['l'] = $slide_link_1;
-        if($slide_pics_2)
-            $slide_pics[2]['l'] = $slide_link_2;
-        if($slide_pics_3)
-            $slide_pics[3]['l'] = $slide_link_3;
-
-        $slide_txt_1 = of_get_option('index_slide_txt_1');
-        $slide_txt_2 = of_get_option('index_slide_txt_2');
-        $slide_txt_3 = of_get_option('index_slide_txt_3');
-        if($slide_pics_1)
-            $slide_pics[1]['t'] = $slide_txt_1;
-        if($slide_pics_2)
-            $slide_pics[2]['t'] = $slide_txt_2;
-        if($slide_pics_3)
-            $slide_pics[3]['t'] = $slide_txt_3;
+        $mag_link_1 = of_get_option('index_mag_link_1');
+        $mag_link_2 = of_get_option('index_mag_link_2');
+        $mag_link_3 = of_get_option('index_mag_link_3');
+        if($mag_pics_1)
+            $mag_pics[1]['l'] = $mag_link_1;
+        if($mag_pics_2)
+            $mag_pics[2]['l'] = $mag_link_2;
+        if($mag_pics_3)
+            $mag_pics[3]['l'] = $mag_link_3;
     ?>
 
-    <div id="pic_down" >
+    <div id="pic_mag" >
         <div class="container">
-        <?php if(!empty($slide_pics)):$k=1;?>
-            <?php foreach($slide_pics as $sp):?>
-                <?php if(isset($sp['p']) && $sp['p']!=''):?>
-                    <?php if(isset($sp['l']) && $sp['l']!=''):?>
-                        <a href="<?=$sp['l']?>" target="_blank">
-                    <?php endif;?>
-                            <span class="pic_down_span <?=$k==3?'span_right':''?>">
-                                <img class="pic_down_img" src="<?=$sp['p']?>" alt="" title="" />
-                                <span class="pic_down_txt"><?=$sp['t']?></span>
-                            </span>
-                    <?php if(isset($sp['l']) && $sp['l']!=''):?>
-                        </a>
-                    <?php endif;?>
+            <div class="mag_00">
+                <img src="<?php bloginfo('template_url');?>/static/img/home/magizine_00.png" />
+            </div>
+            <div class="mag_div mag_01">
+                <?php if(isset($mag_pics[1]['l']) && $mag_pics[1]['l']!=''):?>
+                <a href="<?=$mag_pics[1]['l']?>" target="_blank" />
                 <?php endif;?>
-            <?php $k++;endforeach;?>
-        <?php endif;?>
+                    <img src="<?=$mag_pics[1]['p']?>" />
+                <?php if(isset($mag_pics[1]['l']) && $mag_pics[1]['l']!=''):?>
+                </a>
+                <?php endif;?>
+            </div>
+            <div class="mag_div mag_02">
+                <?php if(isset($mag_pics[2]['l']) && $mag_pics[2]['l']!=''):?>
+                    <a href="<?=$mag_pics[2]['l']?>" target="_blank" />
+                <?php endif;?>
+                <img src="<?=$mag_pics[2]['p']?>" />
+                <?php if(isset($mag_pics[2]['l']) && $mag_pics[2]['l']!=''):?>
+                    </a>
+                <?php endif;?>
+            </div>
+            <div class="mag_div mag_03">
+                <?php if(isset($mag_pics[3]['l']) && $mag_pics[3]['l']!=''):?>
+                    <a href="<?=$mag_pics[3]['l']?>" target="_blank" />
+                <?php endif;?>
+                <img src="<?=$mag_pics[3]['p']?>" />
+                <?php if(isset($mag_pics[3]['l']) && $mag_pics[3]['l']!=''):?>
+                    </a>
+                <?php endif;?>
+            </div>
         </div>
-
-        <!--<a href="http://www.baidu.com" target="_blank">
-            <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a1.jpg" alt="站长素材1" title="" />
-        </a>
-        <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a2.jpg" alt="站长素材2" title="" />
-        <img src="<?/*=bloginfo('template_url');*/?>/static/img/slide/a3.jpg" alt="站长素材3" title="" />-->
     </div>
-
-    <!--<div id="slidedeck_frame" class="skin-slidedeck">
-        <dl class="slidedeck">
-            <dt>Slide 1</dt>
-            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/1.jpg"/>Slide content</dd>
-            <dt>Slide 2</dt>
-            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/2.jpg"/>Slide content</dd>
-            <dt>Slide 3</dt>
-            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/3.jpg"/>Slide content</dd>
-            <dt>Slide 4</dt>
-            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/4.jpg"/>Slide content</dd>
-            <dt>Slide 5</dt>
-            <dd><img src="<?/*=bloginfo('template_url');*/?>/static/img/slidedeck/5.jpg"/>Slide content</dd>
-        </dl>
-    </div>-->
-    <!--<div id="subjects">
-        <div class="g-wrap state-0">
-            <a href="/" target="_blank" class="item-1" idx="1">
-                <span class="p1">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_1.jpg">
-                </span>
-                <span class="p2" style="left: 350px; top: 21px;">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_1_2.jpg">
-                </span>
-            </a>
-            <a href="/" target="_blank" class="item-2" idx="2">
-                <span class="p1">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_2.jpg">
-                </span>
-                <span class="p2">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_2_2.jpg">
-                </span>
-            </a>
-            <a href="/" class="item-3" idx="3">
-                <span class="p1">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_3.jpg">
-                </span>
-                <span class="p2">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_3_2.jpg">
-                </span>
-            </a>
-            <a href="/" target="_blank" class="item-4" idx="4">
-                <span class="p1">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_4.jpg">
-                </span>
-                <span class="p2">
-                    <img alt="" src="<?php /*bloginfo('template_url');*/?>/static/img/home/slider_4_2.jpg">
-                </span>
-            </a>
-        </div>
-    </div>-->
 </div>
 <?php
     get_footer();

@@ -188,13 +188,11 @@ $(function() {
 
 
 $(function(){
-    $('#pic_down .pic_down_span').mouseenter(function(){
-        $(this).stop().animate({opacity:0.8});
-        //$(this).find('.pic_down_img').stop().animate({height:"320px",width:"320px",padding:"20px"});
+    $('#pic_mag .mag_div').mouseenter(function(){
+        $(this).stop().animate({opacity:0.6});
     });
 
-    $('#pic_down .pic_down_span').mouseleave(function(){
+    $('#pic_mag .mag_div').mouseleave(function(){
         $(this).stop().animate({opacity:1});
-        //$(this).find('.pic_down_img').stop().animate({height:"300px",width:"300px",padding:"30px"});
     });
 });
