@@ -153,6 +153,34 @@ function optionsframework_options() {
     ];
 
     $options[] = [
+        'name' => '轮播banner 4',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_4',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 4的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_4',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 5',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_5',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 5的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_5',
+        'type' => 'text'
+    ];
+
+    $options[] = [
         'name' => '首页（杂志图片）',
         'type' => 'heading'
     ];

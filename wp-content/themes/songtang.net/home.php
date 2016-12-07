@@ -65,30 +65,43 @@
 
     <?php
         $template_url = get_template_directory_uri();
-        $mag_pics = [
+        $mag_pics = [];
+        /*$mag_pics = [
             1=>['p'=>$template_url."/static/img/home/magizine_01.png"],
             2=>['p'=>$template_url."/static/img/home/magizine_02.png"],
             3=>['p'=>$template_url."/static/img/home/magizine_03.png"],
-        ];
+        ];*/
         $mag_pics_1 = of_get_option('index_mag_pics_1');
         $mag_pics_2 = of_get_option('index_mag_pics_2');
         $mag_pics_3 = of_get_option('index_mag_pics_3');
+        $mag_pics_4 = of_get_option('index_mag_pics_4');
+        $mag_pics_5 = of_get_option('index_mag_pics_5');
         if($mag_pics_1)
             $mag_pics[1]['p'] = $mag_pics_1;
         if($mag_pics_2)
             $mag_pics[2]['p'] = $mag_pics_2;
         if($mag_pics_3)
             $mag_pics[3]['p'] = $mag_pics_3;
+        if($mag_pics_4)
+            $mag_pics[4]['p'] = $mag_pics_4;
+        if($mag_pics_5)
+            $mag_pics[5]['p'] = $mag_pics_5;
 
         $mag_link_1 = of_get_option('index_mag_link_1');
         $mag_link_2 = of_get_option('index_mag_link_2');
         $mag_link_3 = of_get_option('index_mag_link_3');
+        $mag_link_4 = of_get_option('index_mag_link_4');
+        $mag_link_5 = of_get_option('index_mag_link_5');
         if($mag_pics_1)
             $mag_pics[1]['l'] = $mag_link_1;
         if($mag_pics_2)
             $mag_pics[2]['l'] = $mag_link_2;
         if($mag_pics_3)
             $mag_pics[3]['l'] = $mag_link_3;
+        if($mag_pics_4)
+            $mag_pics[4]['l'] = $mag_link_4;
+        if($mag_pics_5)
+            $mag_pics[5]['l'] = $mag_link_5;
     ?>
 
     <div id="pic_mag" >
@@ -123,6 +136,28 @@
                     </a>
                 <?php endif;?>
             </div>
+            <?php if(isset($mag_pics[4]['p']) && $mag_pics[4]['p']!=''):?>
+            <div class="mag_div mag_04">
+                <?php if(isset($mag_pics[4]['l']) && $mag_pics[4]['l']!=''):?>
+                    <a href="<?=$mag_pics[4]['l']?>" target="_blank" />
+                <?php endif;?>
+                <img src="<?=$mag_pics[4]['p']?>" />
+                <?php if(isset($mag_pics[4]['l']) && $mag_pics[4]['l']!=''):?>
+                    </a>
+                <?php endif;?>
+            </div>
+            <?php endif;?>
+            <?php if(isset($mag_pics[5]['p']) && $mag_pics[5]['p']!=''):?>
+                <div class="mag_div mag_05">
+                    <?php if(isset($mag_pics[5]['l']) && $mag_pics[5]['l']!=''):?>
+                        <a href="<?=$mag_pics[5]['l']?>" target="_blank" />
+                    <?php endif;?>
+                    <img src="<?=$mag_pics[5]['p']?>" />
+                    <?php if(isset($mag_pics[5]['l']) && $mag_pics[5]['l']!=''):?>
+                        </a>
+                    <?php endif;?>
+                </div>
+            <?php endif;?>
         </div>
     </div>
 </div>
