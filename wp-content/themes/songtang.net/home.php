@@ -105,7 +105,7 @@
     <div id="pic_mag" >
         <div class="container">
             <div class="mag_00">
-                <img src="<?php bloginfo('template_url');?>/static/img/home/magizine_00.png" />
+                <img src="<?php bloginfo('template_url');?>/static/img/home/magizine_0.png" />
             </div>
             <div class="mag_div mag_01">
                 <?php if(isset($mag_pics[1]['l']) && $mag_pics[1]['l']!=''):?>
