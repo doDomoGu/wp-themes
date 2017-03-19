@@ -1,0 +1,35 @@
+#banner {
+    width:100%;
+    overflow: hidden;
+}
+#banner .intro {
+    background:#cbcbcb;
+    height:60px;
+}
+
+
+#post_content {
+    /*text-indent: 2em;*/
+    font-size:12px;
+    color: #746969;
+    line-height:22px;
+    text-align: justify;
+}
+
+
+
+#post_content {
+    /*padding:10px;*/
+}
+
+#main.container {
+    margin: 0;
+    width: 100%;
+}
+
+
+
+#footer {
+    border-top: none;
+    padding-top: 0;
+}

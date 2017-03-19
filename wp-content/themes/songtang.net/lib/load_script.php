@@ -20,6 +20,8 @@
             $cssFiles[] = 'page_side_right.css';
         }elseif('page_blank.php' == get_page_template_slug()){
             $cssFiles[] = 'page_blank.css';
+        }elseif('page_blank_20170319.php' == get_page_template_slug()){
+            $cssFiles[] = 'page_blank_20170319.css';
         }else{
             //$cssFiles[] = 'page.css';
         }
