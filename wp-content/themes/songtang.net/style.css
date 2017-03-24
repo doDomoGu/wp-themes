@@ -218,9 +218,12 @@ input, textarea, select, button {
     padding-top:10px;
 }
 
+#footer .container {
+    width:1200px;
+}
+
 #footer .footer-content {
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 #footer .footer-content img{
