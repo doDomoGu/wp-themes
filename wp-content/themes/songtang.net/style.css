@@ -220,6 +220,7 @@ input, textarea, select, button {
 
 #footer .container {
     width:1200px;
+    margin:0 auto;
 }
 
 #footer .footer-content {
@@ -227,7 +228,8 @@ input, textarea, select, button {
 }
 
 #footer .footer-content img{
-    width:100%;
+    width:1140px;
+    margin:0 30px;
 }
 
 #footer .copyright {
