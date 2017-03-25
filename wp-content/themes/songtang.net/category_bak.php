@@ -3,25 +3,27 @@
 ?>
 <div id="content">
     <div id="banner">
-        <div class="intro" style="    background: #cbcbcb;
-    height: 60px;"></div>
+        <div class="intro"></div>
     </div>
-    <div style="background: #c7000b ;height:506px;overflow: hidden;">
-        <div style="width:1200px;position:relative;margin:0 auto;">
-        <img src="http://www.songtang.net/wp-content/uploads/2017/03/20170325051930617.jpg" width="1200" height="506" />
-        <div style="position:absolute;top:130px;right:230px;">
-            <div style="width:80px;border-top:2px solid #fefefe;height:1px;margin-bottom:10px;"></div>
-            <div style="color:#fefefe;font-size:28px;">
-            <?php
-            $category = get_the_category();
-            echo $category[0]->cat_name;
-            ?>
+    <div id="nav" class="container">
+        <div class="wrap">
+            <div class="crumbs">
+                <a href="<?php bloginfo('siteurl'); ?>/">首页</a>
+                <?=get_category_parents_ex(get_query_var('cat')); ?>
+                <a class="on">文章</a>
+            </div>
+            <div class="columns">
+                <?php
+                $current_menu_item_id = get_current_menu_item_id();
+                $menu_items_related = get_related_menu_items($current_menu_item_id);?>
+                <?php foreach($menu_items_related as $mir):?>
+                    <a href="<?=$mir->url?>" <?=$mir->ID==$current_menu_item_id?'class="on"':''?>><?=$mir->post_title!=''?$mir->post_title:$mir->title?><span></span></a>
+                <?php endforeach;?>
             </div>
         </div>
-        </div>
     </div>
-    <div id="main" class="container clearfix" style="width:1200px;">
-
+    <div id="main" class="container clearfix">
+        <div id="left">
             <div id="post_list" class="link-block clearfix">
             <?php if(have_posts()) :?>
                 <?php while(have_posts()) : the_post(); ?>
@@ -45,7 +47,10 @@
 
             <?php endif; ?>
             </div>
-
+        </div>
+        <div id="right">
+            <?php include('sider_right.php');?>
+        </div>
     </div>
 </div>
 

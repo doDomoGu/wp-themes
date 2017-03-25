@@ -242,7 +242,7 @@ function optionsframework_options() {
         ];
     }
 
-    $options = insert_page_option($options,'页面（企业概况）','intro');
+/*    $options = insert_page_option($options,'页面（企业概况）','intro');
     $options = insert_page_option($options,'页面（发展历程）','development');
     $options = insert_page_option($options,'页面（合作伙伴）','cooperation');
     $options = insert_page_option($options,'页面（企业文化）','corporate-culture');
@@ -259,7 +259,7 @@ function optionsframework_options() {
     $options = insert_page_option($options,'分类（日鑫商业）','business');
     $options = insert_page_option($options,'分类（迈华建筑）','building');
     $options = insert_page_option($options,'分类（周道物业）','property');
-    $options = insert_page_option($options,'分类（元素互动）','internet');
+    $options = insert_page_option($options,'分类（元素互动）','internet');*/
 
 	/*$options[] = array(
 		'name' => __('基本设置', 'options_framework_theme'),
