@@ -214,7 +214,7 @@ input, textarea, select, button {
 
 /* footer */
 #footer {
-    border-top: 2px solid #c5c5c5;
+    /*border-top: 2px solid #c5c5c5;*/
     padding-top:10px;
 }
 
