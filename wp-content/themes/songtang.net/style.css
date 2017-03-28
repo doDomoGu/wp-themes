@@ -225,6 +225,7 @@ input, textarea, select, button {
 
 #footer .footer-content {
     padding-top: 20px;
+    padding-bottom:20px;
 }
 
 #footer .footer-content img{
