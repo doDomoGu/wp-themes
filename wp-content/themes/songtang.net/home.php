@@ -94,11 +94,11 @@
         $mag_link_1 = of_get_option('index_mag_link_1');
         $mag_link_2 = of_get_option('index_mag_link_2');
         $mag_link_3 = of_get_option('index_mag_link_3');
-        if($mag_pics_1)
+        if($mag_link_1)
             $mag_pics[1]['l'] = $mag_link_1;
-        if($mag_pics_2)
+        if($mag_link_2)
             $mag_pics[2]['l'] = $mag_link_2;
-        if($mag_pics_3)
+        if($mag_link_3)
             $mag_pics[3]['l'] = $mag_link_3;
     ?>
 
