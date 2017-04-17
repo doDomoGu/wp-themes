@@ -35,9 +35,16 @@
             </a>
         </div>
         <div id="menu">
+            <?php
+                if(WP_THEME_LANG=='cn')
+                    $theme_location = 'header-menu';
+                else
+                    $theme_location = 'header-menu-en';
+
+            ?>
             <?php wp_nav_menu(
                 array(
-                    'theme_location' => 'header-menu',
+                    'theme_location' => $theme_location,
                     'container_class' => 'menu-container',
                     'menu_id' => 'header-menu',
                     'menu_class' => '',

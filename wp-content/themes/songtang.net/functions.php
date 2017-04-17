@@ -1,5 +1,6 @@
 <?php
     register_nav_menus(array('header-menu' => __( '头部导航菜单' ),)); //注册支持导航栏菜单
+    register_nav_menus(array('header-menu-en' => __( '头部导航菜单(英文)' ),)); //注册支持导航栏菜单
 
     //
     if (!function_exists('optionsframework_init')){
