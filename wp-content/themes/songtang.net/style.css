@@ -605,3 +605,44 @@ input, textarea, select, button {
 #sitemap a:hover {
     color: #e62b1e;
 }*/
+
+
+#email-login {
+    width:250px;
+    height:163px;
+    padding:50px;
+}
+
+#email-login .email-login-header {
+    background: #cdcdcd;
+    text-align: center;
+    padding:10px;
+    font-size:22px;
+    font-weight:200;
+}
+
+#email-login input.text {
+    width:120px;
+    margin-right:4px;
+    border:1px solid #aaa;
+    font-size:14px;
+}
+
+#email-login input.text1 {
+    width:250px;
+    margin-right:4px;
+    border:1px solid #aaa;
+    font-size:14px;
+}
+
+#email-login span.email-suffix {
+    font-size:14px;
+
+}
+
+#email-login .submit-btn {
+    margin-top:16px;
+    padding:4px 18px;
+    color:#fff;
+    background-color:#ba1b20;
+}
