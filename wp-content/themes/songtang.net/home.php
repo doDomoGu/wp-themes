@@ -113,8 +113,8 @@
                             <input type="hidden" value="other" name="aliastype">
                             <input type="hidden" value="bizmail" name="dmtype">
                             <input type="hidden" value="" name="p">
-                            <div class="email-login-header">
-                                员工登录
+                            <div class="email-login-header2">
+                                <img src="<?=$template_url?>/static/img/home/home_login_title.jpg" width="250" height="42"/>
                             </div>
                             <br/>
                             <div class="bizmail_column">
