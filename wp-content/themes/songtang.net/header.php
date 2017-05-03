@@ -6,6 +6,9 @@
     <?php include('lib/seo.php'); ?>
     <!--<link rel="pingback" href="<?php /*bloginfo( 'pingback_url' ); */?>" />-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+    <?php if(WP_THEME_LANG=='en'):?>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style_en.css" type="text/css" media="screen" />
+    <?php endif;?>
     <script src="<?php bloginfo('template_url'); ?>/static/js/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/static/js/header.js"></script>
     <?php
