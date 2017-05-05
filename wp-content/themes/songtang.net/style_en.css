@@ -1,4 +1,12 @@
 
 #menu > .menu-container > ul#header-menu > li > a > span {
-	overflow: hidden;
+    overflow:hidden;
+}
+
+#menu > .menu-container > ul#header-menu > li > a {
+}
+
+#menu > .menu-container > ul#header-menu > li {
+	width:88px;
+
 }
