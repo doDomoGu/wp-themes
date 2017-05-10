@@ -106,7 +106,7 @@ function optionsframework_options() {
 	$options = array();
 
     $options[] = [
-        'name' => '首页（上方轮播）',
+        'name' => '首页 上方轮播',
         'type' => 'heading'
     ];
 
@@ -180,8 +180,86 @@ function optionsframework_options() {
         'type' => 'text'
     ];
 
+
     $options[] = [
-        'name' => '首页（杂志图片）',
+        'name' => '首页 上方轮播 （英文）',
+        'type' => 'heading'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 1',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_1_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 1的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_1_en',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 2',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_2_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 2的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_2_en',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 3',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_3_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 3的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_3_en',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 4',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_4_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 4的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_4_en',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 5',
+        'desc' => '尺寸（1140~1920）*400 有效区域1140*400',
+        'id' => 'index_banner_pics_5_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '轮播banner 5的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_banner_link_5_en',
+        'type' => 'text'
+    ];
+
+
+
+    $options[] = [
+        'name' => '首页 杂志图片',
         'type' => 'heading'
     ];
 
@@ -228,6 +306,53 @@ function optionsframework_options() {
     ];
 
     $options[] = [
+        'name' => '首页 杂志图片（英文）',
+        'type' => 'heading'
+    ];
+
+    $options[] = [
+        'name' => '杂志图片 1',
+        'desc' => '尺寸263*263',
+        'id' => 'index_mag_pics_1_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '杂志图片 1的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_mag_link_1_en',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '杂志图片 2',
+        'desc' => '尺寸263*263',
+        'id' => 'index_mag_pics_2_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '杂志图片 2的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_mag_link_2_en',
+        'type' => 'text'
+    ];
+
+    $options[] = [
+        'name' => '杂志图片 3',
+        'desc' => '尺寸263*263',
+        'id' => 'index_mag_pics_3_en',
+        'type' => 'upload'
+    ];
+
+    $options[] = [
+        'name' => '杂志图片 3的链接地址',
+        'desc' => '带http://开头的完整地址',
+        'id' => 'index_mag_link_3_en',
+        'type' => 'text'
+    ];
+
+    /*$options[] = [
         'name' => '首页（新闻分类）',
         'type' => 'heading'
     ];
@@ -240,7 +365,7 @@ function optionsframework_options() {
             'type' => 'select',
             'options' => $options_categories
         ];
-    }
+    }*/
 
 /*    $options = insert_page_option($options,'页面（企业概况）','intro');
     $options = insert_page_option($options,'页面（发展历程）','development');

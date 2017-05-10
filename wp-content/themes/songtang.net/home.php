@@ -1,13 +1,20 @@
 <?php
     get_header();
+
+if(WP_THEME_LANG=='cn')
+    $langFix = '';
+else
+    $langFix = '_en';
+
 ?>
+
 <?php
     $banner_pics = [1=>[],2=>[],3=>[]];
-    $pics_1 = of_get_option('index_banner_pics_1');
-    $pics_2 = of_get_option('index_banner_pics_2');
-    $pics_3 = of_get_option('index_banner_pics_3');
-    $pics_4 = of_get_option('index_banner_pics_4');
-    $pics_5 = of_get_option('index_banner_pics_5');
+    $pics_1 = of_get_option('index_banner_pics_1'.$langFix);
+    $pics_2 = of_get_option('index_banner_pics_2'.$langFix);
+    $pics_3 = of_get_option('index_banner_pics_3'.$langFix);
+    $pics_4 = of_get_option('index_banner_pics_4'.$langFix);
+    $pics_5 = of_get_option('index_banner_pics_5'.$langFix);
     if($pics_1)
         $banner_pics[1]['p'] = $pics_1;
     if($pics_2)
@@ -18,11 +25,11 @@
         $banner_pics[4]['p'] = $pics_4;
     if($pics_5)
         $banner_pics[5]['p'] = $pics_5;
-    $link_1 = of_get_option('index_banner_link_1');
-    $link_2 = of_get_option('index_banner_link_2');
-    $link_3 = of_get_option('index_banner_link_3');
-    $link_4 = of_get_option('index_banner_link_4');
-    $link_5 = of_get_option('index_banner_link_5');
+    $link_1 = of_get_option('index_banner_link_1'.$langFix);
+    $link_2 = of_get_option('index_banner_link_2'.$langFix);
+    $link_3 = of_get_option('index_banner_link_3'.$langFix);
+    $link_4 = of_get_option('index_banner_link_4'.$langFix);
+    $link_5 = of_get_option('index_banner_link_5'.$langFix);
     if($pics_1)
         $banner_pics[1]['l'] = $link_1;
     if($pics_2)
@@ -81,9 +88,9 @@
             2=>['p'=>$template_url."/static/img/home/magizine_02.png"],
             3=>['p'=>$template_url."/static/img/home/magizine_03.png"],
         ];
-        $mag_pics_1 = of_get_option('index_mag_pics_1');
-        $mag_pics_2 = of_get_option('index_mag_pics_2');
-        $mag_pics_3 = of_get_option('index_mag_pics_3');
+        $mag_pics_1 = of_get_option('index_mag_pics_1'.$langFix);
+        $mag_pics_2 = of_get_option('index_mag_pics_2'.$langFix);
+        $mag_pics_3 = of_get_option('index_mag_pics_3'.$langFix);
         if($mag_pics_1)
             $mag_pics[1]['p'] = $mag_pics_1;
         if($mag_pics_2)
@@ -91,9 +98,9 @@
         if($mag_pics_3)
             $mag_pics[3]['p'] = $mag_pics_3;
 
-        $mag_link_1 = of_get_option('index_mag_link_1');
-        $mag_link_2 = of_get_option('index_mag_link_2');
-        $mag_link_3 = of_get_option('index_mag_link_3');
+        $mag_link_1 = of_get_option('index_mag_link_1'.$langFix);
+        $mag_link_2 = of_get_option('index_mag_link_2'.$langFix);
+        $mag_link_3 = of_get_option('index_mag_link_3'.$langFix);
         if($mag_link_1)
             $mag_pics[1]['l'] = $mag_link_1;
         if($mag_link_2)
