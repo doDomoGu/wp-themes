@@ -112,7 +112,49 @@ else
     <div id="pic_mag" >
         <div class="container">
             <div class="mag_00">
+                <?php if(WP_THEME_LANG=='cn'){
+                    $homeTitleImg =  $template_url.'/static/img/home/home_login_title.jpg';
+                    $loginBtnText = '登 录';
+                }else{
+                    $homeTitleImg =  $template_url.'/static/img/home/home_login_title_en.jpg';
+                    $loginBtnText = 'login';
+                }
+
+                ?>
+
                 <section id="email-login">
+                    <article>
+                        <form method="post" target="_blank" action="http://login.songtang.net/" name="form1">
+                            <input type="hidden" value="false" name="firstlogin">
+                            <input type="hidden" value="dm_loginpage" name="errtemplate">
+                            <input type="hidden" value="other" name="aliastype">
+                            <input type="hidden" value="bizmail" name="dmtype">
+                            <input type="hidden" value="" name="p">
+                            <div class="email-login-header2">
+                                <img src="<?=$homeTitleImg?>" width="250" height="42"/>
+                            </div>
+                            <br/>
+                            <div class="bizmail_column">
+                                <div class="bizmail_inputArea">
+                                    <input type="text" value="" class="text" name="LoginForm[username]" /><span class="email-suffix">@songtang.net</span>
+                                    <input type="hidden" value="songtang.net" name="domain">
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="bizmail_column">
+                                <div class="bizmail_inputArea">
+                                    <input type="password" value="" class="text1" name="LoginForm[password]">
+                                </div>
+                            </div>
+                            <div class="bizmail_SubmitArea">
+
+                                <input class="submit-btn" type="submit" value="<?=$loginBtnText?>"/>
+                            </div>
+
+                        </form>
+                    </article>
+                </section>
+                <!--<section id="email-login">
                     <article>
                         <form method="post" target="_blank" action="https://exmail.qq.com/cgi-bin/login" name="form1">
                             <input type="hidden" value="false" name="firstlogin">
@@ -121,11 +163,10 @@ else
                             <input type="hidden" value="bizmail" name="dmtype">
                             <input type="hidden" value="" name="p">
                             <div class="email-login-header2">
-                                <img src="<?=$template_url?>/static/img/home/home_login_title.jpg" width="250" height="42"/>
+                                <img src="<?/*=$template_url*/?>/static/img/home/home_login_title.jpg" width="250" height="42"/>
                             </div>
                             <br/>
                             <div class="bizmail_column">
-                                <!--<label>帐号:</label>-->
                                 <div class="bizmail_inputArea">
                                     <input type="text" value="" class="text" name="uin" /><span class="email-suffix">@songtang.net</span>
                                     <input type="hidden" value="songtang.net" name="domain">
@@ -133,19 +174,17 @@ else
                             </div>
                             <br/>
                             <div class="bizmail_column">
-                                <!--<label>密码:</label>-->
                                 <div class="bizmail_inputArea">
                                     <input type="password" value="" class="text1" name="pwd">
                                 </div>
                             </div>
                             <div class="bizmail_SubmitArea">
-                                <!--<input type="submit" value="" style="display: none;" name="" class="buttom">-->
                                 <input class="submit-btn" type="submit" value="登 录"/>
                             </div>
 
                         </form>
                     </article>
-                </section>
+                </section>-->
                 <!--<img src="<?php /*bloginfo('template_url');*/?>/static/img/home/magizine_0.png" />-->
             </div>
             <div class="mag_div mag_01">
