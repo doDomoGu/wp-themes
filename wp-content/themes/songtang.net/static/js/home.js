@@ -195,4 +195,6 @@ $(function(){
     $('#pic_mag .mag_div').mouseleave(function(){
         $(this).stop().animate({opacity:1});
     });
+
+
 });

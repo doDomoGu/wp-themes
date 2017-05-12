@@ -50,9 +50,13 @@ $(function(){
 
 
     $('#menu > .menu-container > ul#header-menu > li.menu-item-has-children').mouseenter(function(){
-        $(this).find('ul.sub-menu').stop().animate({height:'60px',lineHeight:'60px'},200);
+        if($('#wp_theme_lang').val()=='en'){
+            $(this).find('ul.sub-menu').stop().animate({height:'50px',lineHeight:'20px',paddingTop:'10px'},200);
+        }else{
+            $(this).find('ul.sub-menu').stop().animate({height:'60px',lineHeight:'60px'},200);
+        }
     }).mouseleave(function(){
-        $(this).find('ul.sub-menu').stop().animate({height:'0',lineHeight:'13px'},200);
+        $(this).find('ul.sub-menu').stop().animate({height:'0',lineHeight:'0',paddingTop:'0'},200);
     });
 
     $('#menu > .menu-container > ul#header-menu > li.menu-item-has-children > ul.sub-menu > li').mouseenter(function(){

@@ -10,3 +10,54 @@
 	width:88px;
 
 }
+
+
+#menu > .menu-container > ul#header-menu > li:nth-child(5) > a {
+    line-height:20px;
+}
+
+#menu > .menu-container > ul#header-menu > li:nth-child(5) > a > span {
+    top:20px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu  {
+}
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item {
+    padding-20px;
+    width:106px;
+}
+
+#menu > .menu-container > ul#header-menu > li:nth-child(2) > ul.sub-menu > li.menu-item {
+    width:80px;
+}
+
+#menu > .menu-container > ul#header-menu > li:nth-child(2) > ul.sub-menu > li.menu-item:nth-child(2) {
+    width:110px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(4) {
+    width:76px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(5) {
+    width:80px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(6) {
+    width:90px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(8) {
+    width:80px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(9) {
+    width:80px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(7) {
+    width:126px;
+}
+
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item > a > span {
+}

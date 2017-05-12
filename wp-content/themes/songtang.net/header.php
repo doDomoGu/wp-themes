@@ -30,6 +30,7 @@
     </script>-->
 </head>
 <body>
+<input id="wp_theme_lang" value="<?=WP_THEME_LANG?>" type="hidden" />
 <header id="header">
     <div class="container">
         <div id="logo">
