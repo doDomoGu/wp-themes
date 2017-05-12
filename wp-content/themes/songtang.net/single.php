@@ -9,9 +9,9 @@ setPostViews(get_the_ID());
         <div id="nav" class="container">
             <div class="wrap">
                 <div class="crumbs">
-                    <a href="<?php bloginfo('siteurl'); ?>/">首页</a>
+                    <a href="<?php bloginfo('siteurl'); ?>/"><?=WP_THEME_LANG=='en'?'Home':'首页'?></a>
                     <?=get_category_parents_ex(); ?>
-                    <a class="on">文章</a>
+                    <a class="on"><?=WP_THEME_LANG=='en'?'Article':'文章'?></a>
                 </div>
                 <div class="columns">
                     <?php
@@ -32,7 +32,9 @@ setPostViews(get_the_ID());
                 </div>
                 <div id="post">
                     <h1><?php the_title(); ?></h1>
-                    <h3>发布者: <?php the_author_meta('display_name',$post->post_author);?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览次数: <?=getPostViews(get_the_ID());?></h3>
+
+                    <h3><?=WP_THEME_LANG=='cn'?'发布者':'Publisher '?>: <?php if(WP_THEME_LANG=='cn'){ the_author_meta('display_name',$post->post_author);}else{ the_author_meta('first_name',$post->post_author);} ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=WP_THEME_LANG=='cn'?'浏览次数':'Views '?>: <?=getPostViews(get_the_ID());?></h3>
+                    <!--<h3>发布者: <?php /*the_author_meta('display_name',$post->post_author);*/?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?/*=WP_THEME_LANG=='en'?'Views ':'浏览次数'*/?>: <?/*=getPostViews(get_the_ID());*/?></h3>-->
                     <div id="post_content">
                         <?=$post->post_content?>
                     </div>
