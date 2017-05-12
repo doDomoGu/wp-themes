@@ -66,7 +66,7 @@ else
         </div>
     </div>
         <?php
-            $news_cate_id = of_get_option('index_news_cate_id');
+            $news_cate_id = of_get_option('index_news_cate_id'.$langFix);
             $recent = new WP_Query("showposts=5&cat=".$news_cate_id);
 
         ?>
@@ -76,7 +76,7 @@ else
         <?php while($recent->have_posts()) : $post_item = $recent->the_post();?>
         <div class="item">
             <a href="<?=get_the_permalink()?>"><?php the_title();?><span><?php the_time('Y.m.d')?></span></a>
-            <a class="more" href="<?php echo get_category_link(get_the_category()[0]->term_id)?>">更多新闻</a>
+            <a class="more" href="<?php echo get_category_link(get_the_category()[0]->term_id)?>"><?=WP_THEME_LANG=='cn'?'更多新闻':'more'?></a>
         </div>
         <?php   endwhile; wp_reset_query();  ?>
     </div>

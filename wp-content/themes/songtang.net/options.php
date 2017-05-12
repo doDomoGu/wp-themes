@@ -352,8 +352,8 @@ function optionsframework_options() {
         'type' => 'text'
     ];
 
-    /*$options[] = [
-        'name' => '首页（新闻分类）',
+    $options[] = [
+        'name' => '首页文章分类选择',
         'type' => 'heading'
     ];
 
@@ -365,7 +365,22 @@ function optionsframework_options() {
             'type' => 'select',
             'options' => $options_categories
         ];
-    }*/
+    }
+
+    $options[] = [
+        'name' => '首页文章分类选择（英文）',
+        'type' => 'heading'
+    ];
+
+    if ( $options_categories ) {
+        $options[] = [
+            'name' => '首页新闻分类选择',
+            'desc' => '选择所需要显示的分类,显示最新5条，不选择则从全部文章中选择',
+            'id' => 'index_news_cate_id_en',
+            'type' => 'select',
+            'options' => $options_categories
+        ];
+    }
 
 /*    $options = insert_page_option($options,'页面（企业概况）','intro');
     $options = insert_page_option($options,'页面（发展历程）','development');
