@@ -28,7 +28,7 @@
                 <a href="<?php the_permalink() ?>">
                     <div class="date-block">
                         <span class="day"><?php the_time('d') ?></span>
-                        <?php the_time('M') ?><br>
+                        <?php if(WP_THEME_LANG=='en'){echo date('M',get_the_time('U'));}else{the_time('M');}?><br>
                         <?php the_time('Y') ?>
                     </div>
                     <div class="summary">
