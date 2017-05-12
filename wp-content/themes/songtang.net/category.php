@@ -33,7 +33,7 @@
                     </div>
                     <div class="summary">
                         <h1><?php the_title(); ?></h1>
-                        <h3>发布者: <?php the_author (); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览次数: <?=getPostViews($post->ID);?></h3>
+                        <h3><?=WP_THEME_LANG=='cn'?'发布者':'Publisher '?>: <?php if(WP_THEME_LANG=='cn'){ the_author ();}else{echo get_the_author_meta('first_name');} ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=WP_THEME_LANG=='cn'?'浏览次数':'Views '?>: <?=getPostViews($post->ID);?></h3>
                         <p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 420,"......"); ?></p>
                     </div>
                 </a>
