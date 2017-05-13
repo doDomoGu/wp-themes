@@ -189,7 +189,7 @@ else
             </div>
             <div class="mag_div mag_01">
                 <?php if(isset($mag_pics[1]['l']) && $mag_pics[1]['l']!=''):?>
-                <a href="<?=$mag_pics[1]['l']?>" target="_blank" />
+                <a href="<?=$mag_pics[1]['l']?>" target="_blank" >
                 <?php endif;?>
                     <img src="<?=$mag_pics[1]['p']?>" />
                 <?php if(isset($mag_pics[1]['l']) && $mag_pics[1]['l']!=''):?>
@@ -198,7 +198,7 @@ else
             </div>
             <div class="mag_div mag_02">
                 <?php if(isset($mag_pics[2]['l']) && $mag_pics[2]['l']!=''):?>
-                    <a href="<?=$mag_pics[2]['l']?>" target="_blank" />
+                    <a href="<?=$mag_pics[2]['l']?>" target="_blank" >
                 <?php endif;?>
                 <img src="<?=$mag_pics[2]['p']?>" />
                 <?php if(isset($mag_pics[2]['l']) && $mag_pics[2]['l']!=''):?>
@@ -207,7 +207,7 @@ else
             </div>
             <div class="mag_div mag_03">
                 <?php if(isset($mag_pics[3]['l']) && $mag_pics[3]['l']!=''):?>
-                    <a href="<?=$mag_pics[3]['l']?>" target="_blank" />
+                    <a href="<?=$mag_pics[3]['l']?>" target="_blank" >
                 <?php endif;?>
                 <img src="<?=$mag_pics[3]['p']?>" />
                 <?php if(isset($mag_pics[3]['l']) && $mag_pics[3]['l']!=''):?>
