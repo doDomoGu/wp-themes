@@ -24,6 +24,8 @@
 }
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item {
     width:108px;
+    height:40px;
+    overflow: hidden;
 }
 
 #menu > .menu-container > ul#header-menu > li:nth-child(2) > ul.sub-menu > li.menu-item {
