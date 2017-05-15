@@ -23,7 +23,7 @@
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu  {
 }
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item {
-    padding-20px;
+    padding:20px;
     width:106px;
 }
 
