@@ -9,10 +9,10 @@
 
     <?php $css = get_bloginfo('stylesheet_url');?>
 
-    <link rel="stylesheet" href="<?=$css?>?v=<?=filemtime($css)?>" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?=$css?>?v=<?=filemtime(__DIR__.'/style.css')?>" type="text/css" media="screen" />
     <?php if(WP_THEME_LANG=='en'):?>
         <?php $cssEn = get_bloginfo('template_url').'/style_en.css';?>
-    <link rel="stylesheet" href="<?=$cssEn?>?v=<?=filemtime($cssEn)?>" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?=$cssEn?>?v=<?=filemtime(__DIR__.'/style_en.css')?>" type="text/css" media="screen" />
     <?php endif;?>
     <script src="<?php bloginfo('template_url'); ?>/static/js/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/static/js/header.js"></script>
