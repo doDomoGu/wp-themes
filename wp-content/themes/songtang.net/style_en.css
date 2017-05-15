@@ -23,8 +23,7 @@
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu  {
 }
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item {
-    padding:20px;
-    width:106px;
+    width:110px;
 }
 
 #menu > .menu-container > ul#header-menu > li:nth-child(2) > ul.sub-menu > li.menu-item {
