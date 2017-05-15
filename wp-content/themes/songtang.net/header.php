@@ -6,9 +6,13 @@
     <meta http-equiv="x-ua-compatible" content="IE=8; IE=7" >
     <?php include('lib/seo.php'); ?>
     <!--<link rel="pingback" href="<?php /*bloginfo( 'pingback_url' ); */?>" />-->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+
+    <?php $css = get_bloginfo('stylesheet_url');?>
+
+    <link rel="stylesheet" href="<?=$css?>?v=<?=filemtime($css)?>" type="text/css" media="screen" />
     <?php if(WP_THEME_LANG=='en'):?>
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style_en.css" type="text/css" media="screen" />
+        <?php $cssEn = get_bloginfo('template_url').'/style_en.css';?>
+    <link rel="stylesheet" href="<?=$cssEn?>?v=<?=filemtime($cssEn)?>" type="text/css" media="screen" />
     <?php endif;?>
     <script src="<?php bloginfo('template_url'); ?>/static/js/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/static/js/header.js"></script>
