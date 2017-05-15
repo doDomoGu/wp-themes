@@ -23,7 +23,7 @@
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu  {
 }
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item {
-    width:110px;
+    width:108px;
 }
 
 #menu > .menu-container > ul#header-menu > li:nth-child(2) > ul.sub-menu > li.menu-item {
@@ -47,7 +47,7 @@
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(8) {
-    width:80px;
+    width:70px;
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(9) {
