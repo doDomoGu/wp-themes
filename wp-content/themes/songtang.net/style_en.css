@@ -37,6 +37,10 @@
     width:110px;
 }
 
+#menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(2) {
+    width:116px;
+}
+
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(4) {
     width:76px;
 }
@@ -58,7 +62,7 @@
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item:nth-child(7) {
-    width:126px;
+    width:124px;
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item > a > span {
