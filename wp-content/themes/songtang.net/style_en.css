@@ -21,8 +21,8 @@
 }
 
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu  {
-    height:40px;
-    overflow: hidden;
+    /*height:40px;
+    overflow: hidden;*/
 }
 #menu > .menu-container > ul#header-menu > li > ul.sub-menu > li.menu-item {
     width:108px;
