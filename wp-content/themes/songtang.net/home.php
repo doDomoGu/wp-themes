@@ -84,9 +84,12 @@ else
     <?php
         $template_url = get_template_directory_uri();
         $mag_pics = [
-            1=>['p'=>$template_url."/static/img/home/magizine_01.png"],
-            2=>['p'=>$template_url."/static/img/home/magizine_02.png"],
-            3=>['p'=>$template_url."/static/img/home/magizine_03.png"],
+//            1=>['p'=>$template_url."/static/img/home/magizine_01.png"],
+//            2=>['p'=>$template_url."/static/img/home/magizine_02.png"],
+//            3=>['p'=>$template_url."/static/img/home/magizine_03.png"],
+            1=>['p'=>$template_url."/static/img/home/m-1.jpg"],
+            2=>['p'=>$template_url."/static/img/home/m-2.jpg"],
+            3=>['p'=>$template_url."/static/img/home/m-3.jpg"]
         ];
         $mag_pics_1 = of_get_option('index_mag_pics_1'.$langFix);
         $mag_pics_2 = of_get_option('index_mag_pics_2'.$langFix);
