@@ -164,7 +164,7 @@ input, textarea, select, button {
 #menu > .menu-container > ul#header-menu > li > a > span.bkg {
     top:80px;
     z-index:1;
-    background-color:#f00;
+    background-color:#d82b1e;
     /*-webkit-transition:top 200ms;
     transition:top 200ms;*/
     height:0;
