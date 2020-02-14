@@ -8,9 +8,9 @@ Template Name:单页面_集团介绍
     get_header();
 ?>
 <div id="content">
-    <div id="banner">
-        <div class="intro"></div>
-    </div>
+<!--    <div id="banner">-->
+<!--        <div class="intro"></div>-->
+<!--    </div>-->
     <div id="nav" class="container">
         <div class="wrap">
             <div class="crumbs">
