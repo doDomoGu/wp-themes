@@ -3,9 +3,9 @@ get_header();
 setPostViews(get_the_ID());
 ?>
     <div id="content">
-        <div id="banner">
-            <div class="intro"></div>
-        </div>
+<!--        <div id="banner">-->
+<!--            <div class="intro"></div>-->
+<!--        </div>-->
         <div id="nav" class="container">
             <div class="wrap">
                 <div class="crumbs">
