@@ -8,9 +8,9 @@ Template Name:单页面_空白_20170319
     get_header();
 ?>
 <div id="content">
-    <div id="banner">
-        <div class="intro"></div>
-    </div>
+<!--    <div id="banner">-->
+<!--        <div class="intro"></div>-->
+<!--    </div>-->
     <div id="main" class="container">
         <div id="post_content">
             <?php
