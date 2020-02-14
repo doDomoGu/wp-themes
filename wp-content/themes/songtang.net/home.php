@@ -112,7 +112,7 @@ else
             $mag_pics[3]['l'] = $mag_link_3;
     ?>
 
-    <div id="pic_mag" style="margin-top:70px;">
+    <div id="pic_mag" style="margin-top:70px;margin-bottom:50px;">
         <div class="container">
             <div class="mag_00">
                 <?php if(WP_THEME_LANG=='cn'){
