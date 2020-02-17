@@ -53,10 +53,10 @@ else
             <?php endforeach;?>
             <?php endif;?>
         </ul>
-        <div class="btns">
-            <a href="javascript:void(0);" class="prev"><span class="off"></span><span class="on"></span></a>
-            <a href="javascript:void(0);" class="next"><span class="off"></span><span class="on"></span></a>
-        </div>
+<!--        <div class="btns">-->
+<!--            <a href="javascript:void(0);" class="prev"><span class="off"></span><span class="on"></span></a>-->
+<!--            <a href="javascript:void(0);" class="next"><span class="off"></span><span class="on"></span></a>-->
+<!--        </div>-->
         <div class="g-wrap">
             <ul class="idxs">
                 <?php for($i=0;$i<count($banner_pics);$i++):?>
