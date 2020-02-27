@@ -48,7 +48,7 @@ else
             <?php if(!empty($banner_pics)):?>
             <?php $i=1;foreach($banner_pics as $bp):?>
                 <?php if(isset($bp['p']) && $bp['p']!=''):?>
-            <li style="background-image: url('<?=$bp['p']?>');" class="b<?=$i?>"><a href="<?=isset($bp['l']) && $bp['l']!=''?$bp['l']:'/'?>" target="_blank"></a></li>
+            <li style="background-image: url('<?=$bp['p']?>');background-size: 100% 100%;" class="b<?=$i?>"><a href="<?=isset($bp['l']) && $bp['l']!=''?$bp['l']:'/'?>" target="_blank"></a></li>
                 <?php $i++;endif;?>
             <?php endforeach;?>
             <?php endif;?>
